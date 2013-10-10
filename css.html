@@ -35,7 +35,7 @@ base_url: "../"
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 {% endhighlight %}
 
-    <h3 id="overview-responsive-images">Responsive images</h3>
+    <h3 id="overview-responsive-images">自适应图片</h3>
     <p>在Bootstrap 3 中，图片能够很好地自适应窗口变化，加<code>.img-responsive</code> 类即可。 This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
 {% highlight html %}
 <img src="..." class="img-responsive" alt="Responsive image">
@@ -436,32 +436,32 @@ base_url: "../"
   }
 }
 
-// Generate the extra small columns
+// 生成特别小的格子
 .make-xs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  //当内容为空时，阻止格子被折叠
   min-height: 1px;
-  // Inner gutter via padding
+  //内间距通过padding实现
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  //基于有效格子数目计算格子的宽度（百分比）
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the small columns
+// 生成小的格子
 .make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  //当内容为空时，阻止格子被折叠
   min-height: 1px;
-  // Inner gutter via padding
+  //内间距通过padding实现
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  //基于有效格子数目计算格子的宽度（百分比）
   @media (min-width: @screen-sm-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
@@ -488,20 +488,20 @@ base_url: "../"
 // Generate the medium columns
 .make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  //当内容为空时，阻止格子被折叠
   min-height: 1px;
-  // Inner gutter via padding
+  //内间距通过padding实现
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  //基于有效格子数目计算格子的宽度（百分比）
   @media (min-width: @screen-md-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the medium column offsets
+// 生成中等大小格子的偏移
 .make-md-column-offset(@columns) {
   @media (min-width: @screen-md-min) {
     margin-left: percentage((@columns / @grid-columns));
@@ -518,16 +518,16 @@ base_url: "../"
   }
 }
 
-// Generate the large columns
+// 生成大格子
 .make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  //当内容为空时，阻止格子被折叠
   min-height: 1px;
-  // Inner gutter via padding
+  //内间距通过padding实现
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  //基于有效格子数目计算格子的宽度（百分比）
   @media (min-width: @screen-lg-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
@@ -552,8 +552,8 @@ base_url: "../"
 }
 {% endhighlight %}
 
-    <h4>样例 usage</h4>
-    <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
+    <h4>应用样例</h4>
+    <p>你可以修改变量到自己的定制值，或者采用混合模式用缺省值 。下面是一个采用缺省值，创建一个两列布局，中间有个间隔的例子。</p>
 {% highlight css %}
 .wrapper {
   .make-row();
@@ -578,16 +578,16 @@ base_url: "../"
 
 
 
-  <!-- Typography
+  <!-- 排版
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="type">Typography</h1>
+      <h1 id="type">排版</h1>
     </div>
 
     <!-- Headings -->
     <h2 id="type-headings">Headings</h2>
-    <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+    <p>All HTML headings, <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
     <div class="bs-example bs-example-type">
       <table class="table">
         <tbody>
@@ -664,7 +664,7 @@ base_url: "../"
 
     <!-- Body copy -->
     <h2 id="type-body-copy">Body copy</h2>
-    <p>Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default).</p>
+    <p>Bootstrap 缺省 <code>font-size</code> 是 <strong>14px</strong>，配合 <code>line-height</code> 是<strong>1.428</strong>。这个规则应用到 <code>&lt;body&gt;</code> 和所有 paragraphs。此外 <code>&lt;p&gt;</code> (paragraphs) 设有bottom margin 为半个line-height (10px 默认)。</p>
     <div class="bs-example">
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
       <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -686,60 +686,60 @@ base_url: "../"
 
     <!-- Using LESS -->
     <h3>Built with Less</h3>
-    <p>The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@font-size-base</code> and <code>@line-height-base</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.</p>
+    <p>排版的伸缩取决于 在 <strong>variables.less</strong>两个 LESS变量： <code>@font-size-base</code> 和 <code>@line-height-base</code>。第一个是基本字体大小，第二个是基本行高。我们用这些变量和简单的数学计算创建 margins, paddings, 和 line-heights。</p>
 
 
-    <!-- Emphasis -->
-    <h2 id="type-emphasis">Emphasis</h2>
-    <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+    <!-- 强调 -->
+    <h2 id="type-emphasis">强调</h2>
+    <p>用轻量级的样式实现HTML的强调标记。</p>
 
-    <h3>Small text</h3>
-    <p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 85% the size of the parent. Heading elements receive their own <code>font-size</code> for nested <code>&lt;small&gt;</code> elements.</p>
+    <h3>小文本</h3>
+    <p>为了在一行内或文本块内解除强调效果，用 <code>&lt;small&gt;</code> 标记设置文本大小为父亲对象的85% 。 Heading elements receive their own <code>font-size</code> for nested <code>&lt;small&gt;</code> elements.</p>
     <div class="bs-example">
-      <p><small>This line of text is meant to be treated as fine print.</small></p>
+      <p><small>这一行文本意味着能作为好的打印输出。</small></p>
     </div>
 {% highlight html %}
-<small>This line of text is meant to be treated as fine print.</small>
+<small>这一行文本意味着能作为好的打印输出。</small>
 {% endhighlight %}
 
 
-    <h3>Bold</h3>
+    <h3>粗体</h3>
     <p>For emphasizing a snippet of text with a heavier font-weight.</p>
     <div class="bs-example">
-      <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+      <p>The following snippet of text is <strong>作为粗体文本呈现</strong>.</p>
     </div>
 {% highlight html %}
-<strong>rendered as bold text</strong>
+<strong>作为粗体文本呈现</strong>
 {% endhighlight %}
 
     <h3>Italics</h3>
     <p>For emphasizing a snippet of text with italics.</p>
     <div class="bs-example">
-      <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+      <p>The following snippet of text is <em>作为斜体文本呈现</em>.</p>
     </div>
 {% highlight html %}
-<em>rendered as italicized text</em>
+<em>作为斜体文本呈现</em>
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-info">
-      <h4>Alternate elements</h4>
-      <p>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+      <h4>可选的部件</h4>
+      <p>可以自由使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 在HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
     </div>
 
-    <h3>Alignment classes</h3>
+    <h3>对齐类</h3>
     <p>Easily realign text to components with text alignment classes.</p>
     <div class="bs-example">
-      <p class="text-left">Left aligned text.</p>
-      <p class="text-center">Center aligned text.</p>
-      <p class="text-right">Right aligned text.</p>
+      <p class="text-left">左对齐文本。</p>
+      <p class="text-center">居中对齐文本。</p>
+      <p class="text-right">右对齐文本。</p>
     </div>
 {% highlight html %}
-<p class="text-left">Left aligned text.</p>
-<p class="text-center">Center aligned text.</p>
-<p class="text-right">Right aligned text.</p>
+<p class="text-left">左对齐文本。</p>
+<p class="text-center">居中对齐文本。</p>
+<p class="text-right">右对齐文本。</p>
 {% endhighlight %}
 
-    <h3>Emphasis classes</h3>
+    <h3>强调 classes</h3>
     <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
     <div class="bs-example">
       <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
@@ -786,8 +786,8 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <!-- Addresses -->
-    <h2 id="type-addresses">Addresses</h2>
+    <!-- 地址 -->
+    <h2 id="type-addresses">地址</h2>
     <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
     <div class="bs-example">
       <address>
@@ -797,7 +797,7 @@ base_url: "../"
         <abbr title="Phone">P:</abbr> (123) 456-7890
       </address>
       <address>
-        <strong>Full Name</strong><br>
+        <strong>全名</strong><br>
         <a href="mailto:#">first.last@example.com</a>
       </address>
     </div>
@@ -810,14 +810,14 @@ base_url: "../"
 </address>
 
 <address>
-  <strong>Full Name</strong><br>
+  <strong>全名</strong><br>
   <a href="mailto:#">first.last@example.com</a>
 </address>
 {% endhighlight %}
 
 
-    <!-- Blockquotes -->
-    <h2 id="type-blockquotes">Blockquotes</h2>
+    <!-- 引用块 -->
+    <h2 id="type-blockquotes">引用块</h2>
     <p>For quoting blocks of content from another source within your document.</p>
 
     <h3>Default blockquote</h3>
@@ -867,9 +867,9 @@ base_url: "../"
 
 
     <!-- Lists -->
-    <h2 id="type-lists">Lists</h2>
+    <h2 id="type-lists">列表</h2>
 
-    <h3>Unordered</h3>
+    <h3>无序列表</h3>
     <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
     <div class="bs-example">
       <ul>
@@ -896,7 +896,7 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h3>Ordered</h3>
+    <h3>有序列表</h3>
     <p>A list of items in which the order <em>does</em> explicitly matter.</p>
     <div class="bs-example">
       <ol>
@@ -916,7 +916,7 @@ base_url: "../"
 </ol>
 {% endhighlight %}
 
-    <h3>Unstyled</h3>
+    <h3>无样式列表</h3>
     <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
     <div class="bs-example">
       <ul class="list-unstyled">
@@ -1491,7 +1491,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label for="exampleInputPassword1">密码</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group">
@@ -1504,7 +1504,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <input type="checkbox"> Check me out
           </label>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">引用块</button>
       </form>
     </div><!-- /example -->
 {% highlight html %}
@@ -1514,7 +1514,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
+    <label for="exampleInputPassword1">密码</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-group">
@@ -1527,7 +1527,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <input type="checkbox"> Check me out
     </label>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">引用块</button>
 </form>
 {% endhighlight %}
 
@@ -1549,15 +1549,15 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
           <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
         </div>
         <div class="form-group">
-          <label class="sr-only" for="exampleInputPassword2">Password</label>
+          <label class="sr-only" for="exampleInputPassword2">密码</label>
           <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Remember me
+            <input type="checkbox">记住我
           </label>
         </div>
-        <button type="submit" class="btn btn-default">Sign in</button>
+        <button type="submit" class="btn btn-default">注册</button>
       </form>
     </div><!-- /example -->
 {% highlight html %}
@@ -1567,15 +1567,15 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label class="sr-only" for="exampleInputPassword2">Password</label>
+    <label class="sr-only" for="exampleInputPassword2">密码</label>
     <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox"> Remember me
+      <input type="checkbox">记住我
     </label>
   </div>
-  <button type="submit" class="btn btn-default">Sign in</button>
+  <button type="submit" class="btn btn-default">注册</button>
 </form>
 {% endhighlight %}
 
@@ -1585,13 +1585,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <div class="bs-example">
       <form class="form-horizontal">
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+          <label for="inputEmail3" class="col-sm-2 control-label">邮件</label>
           <div class="col-sm-10">
             <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+          <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
           <div class="col-sm-10">
             <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
           </div>
@@ -1600,14 +1600,14 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
           <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
               <label>
-                <input type="checkbox"> Remember me
+                <input type="checkbox">记住我
               </label>
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Sign in</button>
+            <button type="submit" class="btn btn-default">注册</button>
           </div>
         </div>
       </form>
@@ -1615,13 +1615,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% highlight html %}
 <form class="form-horizontal" role="form">
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 control-label">邮件</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
@@ -1630,14 +1630,14 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Remember me
+          <input type="checkbox">记住我
         </label>
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">注册</button>
     </div>
   </div>
 </form>
@@ -1677,7 +1677,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <textarea class="form-control" rows="3"></textarea>
 {% endhighlight %}
 
-    <h3>Checkboxes and radios</h3>
+    <h3>多选和单选</h3>
     <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
     <h4>Default (stacked)</h4>
     <div class="bs-example">
@@ -1797,13 +1797,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <div class="bs-example">
       <form class="form-horizontal" role="form">
         <div class="form-group">
-          <label class="col-sm-2 control-label">Email</label>
+          <label class="col-sm-2 control-label">邮件</label>
           <div class="col-sm-10">
             <p class="form-control-static">email@example.com</p>
           </div>
         </div>
         <div class="form-group">
-          <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+          <label for="inputPassword" class="col-sm-2 control-label">密码</label>
           <div class="col-sm-10">
             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
           </div>
@@ -1813,13 +1813,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% highlight html %}
 <form class="form-horizontal" role="form">
   <div class="form-group">
-    <label class="col-sm-2 control-label">Email</label>
+    <label class="col-sm-2 control-label">邮件</label>
     <div class="col-sm-10">
       <p class="form-control-static">email@example.com</p>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
     </div>
@@ -1884,7 +1884,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
               <input type="checkbox"> Can't check this
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">引用块</button>
         </fieldset>
       </form>
     </div><!-- /.bs-example -->
@@ -1906,7 +1906,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         <input type="checkbox"> Can't check this
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">引用块</button>
   </fieldset>
 </form>
 {% endhighlight %}
@@ -2031,26 +2031,26 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="buttons">Buttons</h1>
+      <h1 id="buttons">按钮</h1>
     </div>
 
     <h2 id="buttons-options">Options</h2>
     <p>Use any of the available button classes to quickly create a styled button.</p>
     <div class="bs-example">
-      <button type="button" class="btn btn-default">Default</button>
-      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-default">缺省按钮</button>
+      <button type="button" class="btn btn-primary">主按钮</button>
       <button type="button" class="btn btn-success">成功</button>
       <button type="button" class="btn btn-info">消息</button>
       <button type="button" class="btn btn-warning">警告</button>
       <button type="button" class="btn btn-danger">危险</button>
-      <button type="button" class="btn btn-link">Link</button>
+      <button type="button" class="btn btn-link">链接按钮</button>
     </div>
 {% highlight html %}
 <!-- Standard button -->
-<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-default">缺省按钮</button>
 
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-primary">主按钮</button>
 
 <!-- Indicates a successful or positive action -->
 <button type="button" class="btn btn-success">成功</button>
@@ -2065,58 +2065,58 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <button type="button" class="btn btn-danger">危险</button>
 
 <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-link">链接按钮</button>
 {% endhighlight %}
 
     <h2 id="buttons-sizes">Sizes</h2>
     <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
     <div class="bs-example">
       <p>
-        <button type="button" class="btn btn-primary btn-lg">Large button</button>
-        <button type="button" class="btn btn-default btn-lg">Large button</button>
+        <button type="button" class="btn btn-primary btn-lg">大按钮</button>
+        <button type="button" class="btn btn-default btn-lg">大按钮</button>
       </p>
       <p>
-        <button type="button" class="btn btn-primary">Default button</button>
-        <button type="button" class="btn btn-default">Default button</button>
+        <button type="button" class="btn btn-primary">缺省按钮</button>
+        <button type="button" class="btn btn-default">缺省按钮</button>
       </p>
       <p>
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
-        <button type="button" class="btn btn-default btn-sm">Small button</button>
+        <button type="button" class="btn btn-primary btn-sm">小按钮</button>
+        <button type="button" class="btn btn-default btn-sm">小按钮</button>
       </p>
       <p>
-        <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-        <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+        <button type="button" class="btn btn-primary btn-xs">微小按钮</button>
+        <button type="button" class="btn btn-default btn-xs">微小按钮</button>
       </p>
     </div>
 {% highlight html %}
 <p>
-  <button type="button" class="btn btn-primary btn-lg">Large button</button>
-  <button type="button" class="btn btn-default btn-lg">Large button</button>
+  <button type="button" class="btn btn-primary btn-lg">大按钮</button>
+  <button type="button" class="btn btn-default btn-lg">大按钮</button>
 </p>
 <p>
-  <button type="button" class="btn btn-primary">Default button</button>
-  <button type="button" class="btn btn-default">Default button</button>
+  <button type="button" class="btn btn-primary">缺省按钮</button>
+  <button type="button" class="btn btn-default">缺省按钮</button>
 </p>
 <p>
-  <button type="button" class="btn btn-primary btn-sm">Small button</button>
-  <button type="button" class="btn btn-default btn-sm">Small button</button>
+  <button type="button" class="btn btn-primary btn-sm">小按钮</button>
+  <button type="button" class="btn btn-default btn-sm">小按钮</button>
 </p>
 <p>
-  <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-  <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+  <button type="button" class="btn btn-primary btn-xs">微小按钮</button>
+  <button type="button" class="btn btn-default btn-xs">微小按钮</button>
 </p>
 {% endhighlight %}
 
     <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
     <div class="bs-example">
       <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">块级别按钮</button>
+        <button type="button" class="btn btn-default btn-lg btn-block">块级别按钮</button>
       </div>
     </div>
 {% highlight html %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">块级别按钮</button>
+<button type="button" class="btn btn-default btn-lg btn-block">块级别按钮</button>
 {% endhighlight %}
 
 
@@ -2126,23 +2126,23 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <h3>Button element</h3>
     <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
     <p class="bs-example">
-      <button type="button" class="btn btn-primary btn-lg active">Primary button</button>
-      <button type="button" class="btn btn-default btn-lg active">Button</button>
+      <button type="button" class="btn btn-primary btn-lg active">主按钮</button>
+      <button type="button" class="btn btn-default btn-lg active">按钮</button>
     </p>
 {% highlight html %}
-<button type="button" class="btn btn-primary btn-lg active">Primary button</button>
-<button type="button" class="btn btn-default btn-lg active">Button</button>
+<button type="button" class="btn btn-primary btn-lg active">主按钮</button>
+<button type="button" class="btn btn-default btn-lg active">按钮</button>
 {% endhighlight %}
 
     <h3>Anchor element</h3>
     <p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p>
     <p class="bs-example">
-      <a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
-      <a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+      <a href="#" class="btn btn-primary btn-lg active" role="button">主链接</a>
+      <a href="#" class="btn btn-default btn-lg active" role="button">链接</a>
     </p>
 {% highlight html %}
-<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
-<a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+<a href="#" class="btn btn-primary btn-lg active" role="button">主链接</button>
+<a href="#" class="btn btn-default btn-lg active" role="button">链接</a>
 {% endhighlight %}
 
 
@@ -2152,12 +2152,12 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <h3>Button element</h3>
     <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
     <p class="bs-example">
-      <button type="button" class="btn btn-primary btn-lg" disabled="disabled">Primary button</button>
-      <button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+      <button type="button" class="btn btn-primary btn-lg" disabled="disabled">主按钮</button>
+      <button type="button" class="btn btn-default btn-lg" disabled="disabled">按钮</button>
     </p>
 {% highlight html %}
-<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Primary button</button>
-<button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+<button type="button" class="btn btn-lg btn-primary" disabled="disabled">主按钮</button>
+<button type="button" class="btn btn-default btn-lg" disabled="disabled">按钮</button>
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-danger">
@@ -2168,12 +2168,12 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <h3>Anchor element</h3>
     <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
     <p class="bs-example">
-      <a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a>
-      <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
+      <a href="#" class="btn btn-primary btn-lg disabled" role="button">主链接</button>
+      <a href="#" class="btn btn-default btn-lg disabled" role="button">链接</a>
     </p>
 {% highlight html %}
-<a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a>
-<a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
+<a href="#" class="btn btn-primary btn-lg disabled" role="button">主链接</button>
+<a href="#" class="btn btn-default btn-lg disabled" role="button">链接</a>
 {% endhighlight %}
     <p>
       We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.
@@ -2187,20 +2187,20 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <h2 id="buttons-tags">Button tags</h2>
     <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
     <form class="bs-example">
-      <a class="btn btn-default" href="#" role="button">Link</a>
-      <button class="btn btn-default" type="submit">Button</button>
+      <a class="btn btn-default" href="#" role="button">链接</a>
+      <button class="btn btn-default" type="submit">按钮</button>
       <input class="btn btn-default" type="button" value="Input">
-      <input class="btn btn-default" type="submit" value="Submit">
+      <input class="btn btn-default" type="submit" value="引用块">
     </form>
 {% highlight html %}
-<a class="btn btn-default" href="#" role="button">Link</a>
-<button class="btn btn-default" type="submit">Button</button>
+<a class="btn btn-default" href="#" role="button">链接</a>
+<button class="btn btn-default" type="submit">按钮</button>
 <input class="btn btn-default" type="button" value="Input">
-<input class="btn btn-default" type="submit" value="Submit">
+<input class="btn btn-default" type="submit" value="引用块">
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Cross-browser rendering</h4>
+      <h4>跨浏览器兼容</h4>
       <p>As a best practice, <strong>we highly recommend using the <code>&lt;button&gt;</code> element whenever possible</strong> to ensure matching cross-browser rendering.</p>
       <p>Among other things, there's <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">a Firefox bug</a> that prevents us from setting the <code>line-height</code> of <code>&lt;input&gt;</code>-based buttons, causing them to not exactly match the height of other buttons on Firefox.</p>
     </div>
@@ -2233,7 +2233,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Responsive images</h4>
+      <h4>自适应图片</h4>
       <p>Looking for how to make images more responsive? <a href="../css#overview-responsive-images">Check out the responsive images section</a> up top.</p>
     </div>
 
@@ -2244,11 +2244,11 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="helper-classes">Helper classes</h1>
+      <h1 id="helper-classes">辅助类</h1>
     </div>
 
 
-    <h3 id="helper-classes-close">Close icon</h3>
+    <h3 id="helper-classes-close">关闭图标</h3>
     <p>Use the generic close icon for dismissing content like modals and alerts.</p>
     <div class="bs-example">
       <p><button type="button" class="close" aria-hidden="true">&times;</button></p>
@@ -2258,7 +2258,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h3 id="helper-classes-floats">Quick floats</h3>
+    <h3 id="helper-classes-floats">快速浮动</h3>
     <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
 {% highlight html %}
 <div class="pull-left">...</div>
@@ -2288,7 +2288,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     </div>
 
 
-    <h3 id="helper-classes-center">Center content blocks</h3>
+    <h3 id="helper-classes-center">中央对齐内容块</h3>
     <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
 {% highlight html %}
 <div class="center-block">...</div>
@@ -2309,7 +2309,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
 
-    <h3 id="helper-classes-clearfix">Clearfix</h3>
+    <h3 id="helper-classes-clearfix">清除浮动</h3>
     <p>Clear the <code>float</code> on any element with the <code>.clearfix</code> class. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p>
 {% highlight html %}
 <!-- Usage as a class -->
@@ -2335,7 +2335,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h3 id="helper-classes-show-hide">Showing and hiding content</h3>
+    <h3 id="helper-classes-show-hide">显示或隐藏内容</h3>
     <p>Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="../css/#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
     <p><code>.hide</code> is also available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p>
 {% highlight html %}
@@ -2362,7 +2362,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h3 id="helper-classes-screen-readers">Screen reader content</h3>
+    <h3 id="helper-classes-screen-readers">屏幕阅读内容</h3>
     <p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Necessary for following <a href="{{ page.base_url }}getting-started#accessibility">accessibility best practices</a>. Can also be used as a mixin.</p>
 {% highlight html %}
 <a class="sr-only" href="#content">Skip to main content</a>
@@ -2375,7 +2375,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h3 id="helper-classes-image-replacement">Image replacement</h3>
+    <h3 id="helper-classes-image-replacement">图片代用</h3>
     <p>Utilize the <code>.text-hide</code> class or mixin to help replace an element's text content with a background image.</p>
 {% highlight html %}
 <h1 class="text-hide">Custom heading</h1>
@@ -2394,7 +2394,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   ================================================== -->
   <div class="bs-docs-section" id="responsive-utilities">
     <div class="page-header">
-      <h1>Responsive utilities</h1>
+      <h1>自适应应用</h1>
     </div>
     <p class="lead">For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.</p>
     <p>Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. <strong>Responsive utilities are currently only available for block and table toggling.</strong> Use with inline and table elements is currently not supported.</p>
