@@ -1215,8 +1215,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="tables-condensed">Condensed table</h2>
-    <p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
+    <h2 id="tables-condensed">紧凑型表格</h2>
+    <p>添加 <code>.table-condensed</code> 到表格，得到紧凑型布局。（ cell padding 减半）</p>
     <div class="bs-example">
       <table class="table table-condensed">
         <thead>
@@ -1255,8 +1255,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="tables-contextual-classes">Contextual classes</h2>
-    <p>Use contextual classes to color table rows or individual cells.</p>
+    <h2 id="tables-contextual-classes">上下文相关的类</h2>
+    <p>用上下文相关类来彩色化表格行或表格单元。</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <colgroup>
@@ -1274,25 +1274,25 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <td>
               <code>.active</code>
             </td>
-            <td>Applies the hover color to a particular row or cell</td>
+            <td>应用鼠标 悬停颜色到指定的行或表格单元</td>
           </tr>
           <tr>
             <td>
               <code>.success</code>
             </td>
-            <td>Indicates a successful or positive action</td>
+            <td>表明一个成功的或正面的操作</td>
           </tr>
           <tr>
             <td>
               <code>.warning</code>
             </td>
-            <td>Indicates a warning that might need attention</td>
+            <td>表明一个警告的或需要注意的操作</td>
           </tr>
           <tr>
             <td>
               <code>.danger</code>
             </td>
-            <td>Indicates a dangerous or potentially negative action</td>
+            <td>表明一个危险的或负面的操作</td>
           </tr>
         </tbody>
       </table>
@@ -1370,8 +1370,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="tables-responsive">Responsive tables</h2>
-    <p>Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally up to small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
+    <h2 id="tables-responsive">自响应式表格</h2>
+    <p>创建自适应表格是通过在 <code>.table</code> 中加入 <code>.table-responsive</code> 实现，当小设备浏览时(小于768px)，自动出现垂直方向滚动条 。</p>
     <div class="bs-example">
       <div class="table-responsive">
         <table class="table">
@@ -1483,11 +1483,11 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     </div>
 
     <h2 id="forms-example">基本例子</h2>
-    <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+    <p>独立的表单控件自动应用一些全局样式。 所有文本式样的 <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, 和<code>&lt;select&gt;</code> 部件附带 <code>.form-control</code> 设置，宽度默认被设置为 <code>width: 100%;</code> 。 Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
     <div class="bs-example">
       <form role="form">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label for="exampleInputEmail1">邮件地址</label>
           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         </div>
         <div class="form-group">
@@ -1495,7 +1495,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group">
-          <label for="exampleInputFile">File input</label>
+          <label for="exampleInputFile">文件上载</label>
           <input type="file" id="exampleInputFile">
           <p class="help-block">样例 block-level help text here.</p>
         </div>
@@ -1510,7 +1510,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% highlight html %}
 <form role="form">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1">邮件地址</label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
   <div class="form-group">
@@ -1518,7 +1518,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
+    <label for="exampleInputFile">文件上载</label>
     <input type="file" id="exampleInputFile">
     <p class="help-block">样例 block-level help text here.</p>
   </div>
@@ -1532,11 +1532,11 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="forms-inline">Inline form</h2>
-    <p>Add <code>.form-inline</code> for left-aligned and inline-block controls for a compact layout.</p>
+    <h2 id="forms-inline">Inline 表单</h2>
+    <p>添加 <code>.form-inline</code> 实现左对齐及 inline-block控件为一个紧凑型布局。</p>
     <div class="bs-callout bs-callout-danger">
-      <h4>Requires custom widths</h4>
-      <p>Inputs, selects, and textareas are 100% wide by default in Bootstrap. To use the inline form, you'll have to set a width on the form controls used within.</p>
+      <h4>定制宽度要求</h4>
+      <p>Inputs, selects, 和 textareas 部件宽度默认是 100%。To use the inline form, you'll have to set a width on the form controls used within.</p>
     </div>
     <div class="bs-callout bs-callout-danger">
       <h4>Always add labels</h4>
@@ -1545,7 +1545,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <div class="bs-example">
       <form class="form-inline" role="form">
         <div class="form-group">
-          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+          <label class="sr-only" for="exampleInputEmail2">邮件地址</label>
           <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
         </div>
         <div class="form-group">
@@ -1557,13 +1557,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <input type="checkbox">记住我
           </label>
         </div>
-        <button type="submit" class="btn btn-default">注册</button>
+        <button type="submit" class="btn btn-default">登陆</button>
       </form>
     </div><!-- /example -->
 {% highlight html %}
 <form class="form-inline" role="form">
   <div class="form-group">
-    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+    <label class="sr-only" for="exampleInputEmail2">邮件地址</label>
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
   </div>
   <div class="form-group">
@@ -1575,7 +1575,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <input type="checkbox">记住我
     </label>
   </div>
-  <button type="submit" class="btn btn-default">注册</button>
+  <button type="submit" class="btn btn-default">登陆</button>
 </form>
 {% endhighlight %}
 
@@ -1607,7 +1607,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">注册</button>
+            <button type="submit" class="btn btn-default">登陆</button>
           </div>
         </div>
       </form>
@@ -1637,20 +1637,20 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">注册</button>
+      <button type="submit" class="btn btn-default">登陆</button>
     </div>
   </div>
 </form>
 {% endhighlight %}
 
 
-    <h2 id="forms-controls">Supported controls</h2>
+    <h2 id="forms-controls">支持的控件</h2>
     <p>参考样例 of standard form controls supported in an example form layout.</p>
 
     <h3>Inputs</h3>
     <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
     <div class="bs-callout bs-callout-danger">
-      <h4>Type declaration required</h4>
+      <h4>类型申明要求</h4>
       <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
     </div>
     <div class="bs-example">
@@ -1666,8 +1666,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href="../components/#input-groups">check out the input group component</a>.</p>
     </div>
 
-    <h3>Textarea</h3>
-    <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+    <h3>文本区控件</h3>
+    <p>表单控件支持多行文本。更改 <code>rows</code> 属性实现。</p>
     <div class="bs-example">
       <form role="form">
         <textarea class="form-control" rows="3"></textarea>
@@ -1678,7 +1678,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
     <h3>多选和单选</h3>
-    <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
+    <p>Checkboxes 用来选择一个或多个选项， radios是从众多选项中选择一个。</p>
     <h4>Default (stacked)</h4>
     <div class="bs-example">
       <form role="form">
@@ -1753,7 +1753,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
     <h3>Selects</h3>
-    <p>Use the default option, or add <code>multiple</code> to show multiple options at once.</p>
+    <p>在缺省的选项基础上，通过加 <code>multiple</code> 来一次显示多个选项。</p>
     <div class="bs-example">
       <form role="form">
         <select class="form-control">
@@ -1842,7 +1842,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <input class="form-control" id="focusedInput" type="text" value="This is focused...">
 {% endhighlight %}
 
-    <h3 id="forms-disabled-inputs">Disabled inputs</h3>
+    <h3 id="forms-disabled-inputs">禁止输入</h3>
     <p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
     <div class="bs-example">
       <form role="form">
@@ -1912,35 +1912,35 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
     <h3 id="forms-validation">验证状态</h3>
-    <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
+    <p>表单控件上包括验证样式为 error, warning, 和 success等状态。通过添加 <code>.has-warning</code>, <code>.has-error</code>, 和 <code>.has-success</code> 到父对象部件来启用。 Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
 
     <div class="bs-example">
       <form role="form">
         <div class="form-group has-success">
-          <label class="control-label" for="inputSuccess">Input with success</label>
+          <label class="control-label" for="inputSuccess">输入成功</label>
           <input type="text" class="form-control" id="inputSuccess">
         </div>
         <div class="form-group has-warning">
-          <label class="control-label" for="inputWarning">Input with warning</label>
+          <label class="control-label" for="inputWarning">输入警告</label>
           <input type="text" class="form-control" id="inputWarning">
         </div>
         <div class="form-group has-error">
-          <label class="control-label" for="inputError">Input with error</label>
+          <label class="control-label" for="inputError">输入错误</label>
           <input type="text" class="form-control" id="inputError">
         </div>
       </form>
     </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="form-group has-success">
-  <label class="control-label" for="inputSuccess">Input with success</label>
+  <label class="control-label" for="inputSuccess">输入成功</label>
   <input type="text" class="form-control" id="inputSuccess">
 </div>
 <div class="form-group has-warning">
-  <label class="control-label" for="inputWarning">Input with warning</label>
+  <label class="control-label" for="inputWarning">输入警告</label>
   <input type="text" class="form-control" id="inputWarning">
 </div>
 <div class="form-group has-error">
-  <label class="control-label" for="inputError">Input with error</label>
+  <label class="control-label" for="inputError">输入错误</label>
   <input type="text" class="form-control" id="inputError">
 </div>
 {% endhighlight %}
@@ -2011,7 +2011,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 </div>
 {% endhighlight %}
 
-    <h2 id="forms-help-text">Help text</h2>
+    <h2 id="forms-help-text">帮助文本</h2>
     <p>Block level help text for form controls.</p>
     <div class="bs-example">
       <form role="form">
@@ -2234,7 +2234,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
     <div class="bs-callout bs-callout-warning">
       <h4>自适应图片</h4>
-      <p>Looking for how to make images more responsive? <a href="../css#overview-responsive-images">Check out the responsive images section</a> up top.</p>
+      <p>查看怎样使得图片更好地自适应？ <a href="../css#overview-responsive-images">查看自适应图片段</a></p>
     </div>
 
   </div>
@@ -2289,7 +2289,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-center">中央对齐内容块</h3>
-    <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
+    <p>设置一个部件到 <code>display: block</code> 并通过 <code>margin</code>来使得中央对齐。这个在混合多类的情况及单类的情况都有效。</p>
 {% highlight html %}
 <div class="center-block">...</div>
 {% endhighlight %}
@@ -2310,7 +2310,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-clearfix">清除浮动</h3>
-    <p>Clear the <code>float</code> on any element with the <code>.clearfix</code> class. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p>
+    <p>清除任何部件的浮动<code>float</code> ，可以用 <code>.clearfix</code> class. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> as popularized by Nicolas Gallagher. 这个在混合多类的情况也能使用</p>
 {% highlight html %}
 <!-- Usage as a class -->
 <div class="clearfix">...</div>
@@ -2336,7 +2336,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-show-hide">显示或隐藏内容</h3>
-    <p>Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="../css/#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
+    <p>强制一个部件被显示或隐藏(<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="../css/#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
     <p><code>.hide</code> is also available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p>
 {% highlight html %}
 <div class="show">...</div>
@@ -2365,7 +2365,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <h3 id="helper-classes-screen-readers">屏幕阅读内容</h3>
     <p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Necessary for following <a href="{{ page.base_url }}getting-started#accessibility">accessibility best practices</a>. Can also be used as a mixin.</p>
 {% highlight html %}
-<a class="sr-only" href="#content">Skip to main content</a>
+<a class="sr-only" href="#content">跳到主内容</a>
 {% endhighlight %}
 {% highlight css %}
 // Usage as a Mixin
