@@ -2,7 +2,7 @@
 layout: default
 title: CSS
 slug: css
-lead: "Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system."
+lead: "全局 CSS 设置，通过扩展的CSS类来样式化并优化基本的 HTML 部件，以及一个高级的网格系统。"
 base_url: "../"
 ---
 
@@ -42,19 +42,19 @@ base_url: "../"
 {% endhighlight %}
 
     <h3 id="overview-type-links">排版和链接</h3>
-    <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+    <p>Bootstrap3.0.0 设置基本的显示、排版和链接样式。尤其注意：</p>
     <ul>
-      <li>Set <code>background-color: #fff;</code> on the <code>body</code></li>
-      <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
-      <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+      <li>在<code>body</code>段，设置 <code>background-color: #fff;</code>背景颜色为白色</li>
+      <li>用<code>@font-family-base</code>, <code>@font-size-base</code>, 和 <code>@line-height-base</code> 属性作为文字排版的基础</li>
+      <li>用 <code>@link-color</code>设置全局链接颜色 ，仅仅在<code>:hover</code>段，应用链接下划线 </li>
     </ul>
     <p>这些样式被定义在 <code>scaffolding.less</code>.</p>
 
     <h3 id="overview-normalize">正常化（浏览器行为重置）</h3>
     <p>为实现跨浏览器兼容，我们用 <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
 
-    <h3 id="overview-container">Containers</h3>
-    <p>为居中对齐一个页面的内容，包装该内容用一个 <code>.container</code>. Containers set <code>max-width</code> at various media query breakpoints to match our grid system.</p>
+    <h3 id="overview-container">容器</h3>
+    <p>为居中对齐一个页面的内容，包装该内容用一个 <code>.container</code>。在各种媒体查询载入点，Containers 通过设置 <code>max-width</code>来匹配网格系统。</p>
 {% highlight html %}
 <div class="container">
   ...
@@ -302,7 +302,7 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="grid-responsive-resets">Responsive column resets</h3>
+    <h3 id="grid-responsive-resets">自适应式列宽重置</h3>
     <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href="../css#responsive-utilities">responsive utility classes</a>.</p>
 {% highlight html %}
 <div class="row">
@@ -330,7 +330,7 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h3 id="grid-offsetting">Offsetting columns</h3>
+    <h3 id="grid-offsetting">偏移列</h3>
     <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
@@ -586,21 +586,21 @@ base_url: "../"
     </div>
 
     <!-- Headings -->
-    <h2 id="type-headings">Headings</h2>
-    <p>All HTML headings, <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+    <h2 id="type-headings">标题</h2>
+    <p>所有 HTML 标题, <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>, 都是有效的。 <code>.h1</code> 到 <code>.h6</code> classes 也是有效的，它们用于当想采用对应标题的字体样式，但又想限制文字在一行显示的情况。</p>
     <div class="bs-example bs-example-type">
       <table class="table">
         <tbody>
           <tr>
-            <td><h1>h1. Bootstrap heading</h1></td>
+            <td><h1>h1. Bootstrap 是十分好的前端框架</h1></td>
             <td class="info">Semibold 36px</td>
           </tr>
           <tr>
-            <td><h2>h2. Bootstrap heading</h2></td>
+            <td><h2>h2. Plone是最好的CMS</h2></td>
             <td class="info">Semibold 30px</td>
           </tr>
           <tr>
-            <td><h3>h3. Bootstrap heading</h3></td>
+            <td><h3>h3. python是很强大的语言</h3></td>
             <td class="info">Semibold 24px</td>
           </tr>
           <tr>
@@ -663,7 +663,7 @@ base_url: "../"
 
 
     <!-- Body copy -->
-    <h2 id="type-body-copy">Body copy</h2>
+    <h2 id="type-body-copy">Body正文</h2>
     <p>Bootstrap 缺省 <code>font-size</code> 是 <strong>14px</strong>，配合 <code>line-height</code> 是<strong>1.428</strong>。这个规则应用到 <code>&lt;body&gt;</code> 和所有 paragraphs。此外 <code>&lt;p&gt;</code> (paragraphs) 设有bottom margin 为半个line-height (10px 默认)。</p>
     <div class="bs-example">
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -685,7 +685,7 @@ base_url: "../"
 {% endhighlight %}
 
     <!-- Using LESS -->
-    <h3>Built with Less</h3>
+    <h3>用Less建立</h3>
     <p>排版的伸缩取决于 在 <strong>variables.less</strong>两个 LESS变量： <code>@font-size-base</code> 和 <code>@line-height-base</code>。第一个是基本字体大小，第二个是基本行高。我们用这些变量和简单的数学计算创建 margins, paddings, 和 line-heights。</p>
 
 
@@ -706,16 +706,16 @@ base_url: "../"
     <h3>粗体</h3>
     <p>For emphasizing a snippet of text with a heavier font-weight.</p>
     <div class="bs-example">
-      <p>The following snippet of text is <strong>作为粗体文本呈现</strong>.</p>
+      <p>下面的文本是 <strong>作为粗体文本呈现</strong>.</p>
     </div>
 {% highlight html %}
 <strong>作为粗体文本呈现</strong>
 {% endhighlight %}
 
-    <h3>Italics</h3>
-    <p>For emphasizing a snippet of text with italics.</p>
+    <h3>斜体</h3>
+    <p>采用斜体来强调部分文本</p>
     <div class="bs-example">
-      <p>The following snippet of text is <em>作为斜体文本呈现</em>.</p>
+      <p>下面的文本是 <em>作为斜体文本呈现</em>.</p>
     </div>
 {% highlight html %}
 <em>作为斜体文本呈现</em>
@@ -727,7 +727,7 @@ base_url: "../"
     </div>
 
     <h3>对齐类</h3>
-    <p>Easily realign text to components with text alignment classes.</p>
+    <p>采用文本对齐类方便地将文本重新对齐到部件。</p>
     <div class="bs-example">
       <p class="text-left">左对齐文本。</p>
       <p class="text-center">居中对齐文本。</p>
@@ -764,10 +764,10 @@ base_url: "../"
 
 
     <!-- Abbreviations -->
-    <h2 id="type-abbreviations">Abbreviations</h2>
+    <h2 id="type-abbreviations">缩写</h2>
     <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
 
-    <h3>Basic abbreviation</h3>
+    <h3>基本缩写</h3>
     <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute with the <code>&lt;abbr&gt;</code> element.</p>
     <div class="bs-example">
       <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
@@ -1014,7 +1014,7 @@ base_url: "../"
       <h1 id="code">Code</h1>
     </div>
 
-    <h2>Inline</h2>
+    <h2>行内样式</h2>
     <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
 <div class="bs-example">
   For example, <code>&lt;section&gt;</code> should be wrapped as inline.
@@ -1752,7 +1752,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 </label>
 {% endhighlight %}
 
-    <h3>Selects</h3>
+    <h3>选择框</h3>
     <p>在缺省的选项基础上，通过加 <code>multiple</code> 来一次显示多个选项。</p>
     <div class="bs-example">
       <form role="form">
@@ -1874,14 +1874,14 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
           </div>
           <div class="form-group">
-            <label for="disabledSelect">Disabled select menu</label>
+            <label for="disabledSelect">禁止选择菜单</label>
             <select id="disabledSelect" class="form-control">
               <option>禁止选择</option>
             </select>
           </div>
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Can't check this
+              <input type="checkbox">不能选择这个
             </label>
           </div>
           <button type="submit" class="btn btn-primary">引用块</button>
@@ -1896,14 +1896,14 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <label for="disabledSelect">禁止选择菜单</label>
       <select id="disabledSelect" class="form-control">
         <option>禁止选择</option>
       </select>
     </div>
     <div class="checkbox">
       <label>
-        <input type="checkbox"> Can't check this
+        <input type="checkbox">不能选择这个
       </label>
     </div>
     <button type="submit" class="btn btn-primary">引用块</button>
@@ -2213,7 +2213,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="images">Images</h1>
+      <h1 id="images">图片</h1>
     </div>
 
     <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
@@ -2283,8 +2283,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Not for use in navbars</h4>
-      <p>To align components in navbars with utility classes, use <code>.navbar-left</code> or <code>.navbar-right</code> instead. <a href="../components/#navbar-component-alignment">See the navbar docs</a> for details.</p>
+      <h4>不要用在导航条中</h4>
+      <p>在导航条中，采用 <code>.navbar-left</code> 或 <code>.navbar-right</code> 。 <a href="../components/#navbar-component-alignment">详细情况查看导航条文档</a> 。</p>
     </div>
 
 
