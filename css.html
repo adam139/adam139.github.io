@@ -13,7 +13,7 @@ base_url: "../"
     <div class="page-header">
       <h1 id="overview">概览</h1>
     </div>
-    <p class="lead">Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+    <p class="lead">弄明白Bootstrap框架的关键特性的真相， 用我们的方案，实现更好、更快、更强的 web开发。</p>
 
     <h3 id="overview-doctype">HTML5 doctype</h3>
     <p>Bootstrap 采用的某些HTML部件和CSS属性要求HTML5doctype。包括下面的申明在HTML文档开始处。</p>
@@ -26,7 +26,7 @@ base_url: "../"
 
     <h3 id="overview-mobile">移动应用优先</h3>
     <p>在 Bootstrap 2系列版本中，我们增加了可选的支持移动应用的部分。在Bootstrap 3,我们以移动应用友好的原则彻底重写整个项目，不仅仅是添加可选的移动应用样式 。 事实上， <strong>Bootstrap3 是移动优先的</strong>，移动应用优先的原则贯彻在整个项目当中。</p>
-    <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+    <p>为了保障实现触摸式缩放， <strong>添加 viewport meta tag</strong>到 <code>&lt;head&gt;</code>.</p>
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% endhighlight %}
@@ -70,7 +70,7 @@ base_url: "../"
     <div class="page-header">
       <h1 id="grid">网格系统</h1>
     </div>
-    <p class="lead">Bootstrap 包括一个自适应，移动优先的、浮动的12格网格系统 that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
+    <p class="lead">Bootstrap 包括一个自适应，移动优先的、浮动的12格网格系统 。它包含 <a href="#grid-example-basic">一些预定义的css classes</a> 来实现容易的排版和强大的功能。 <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
 
     <h3 id="grid-media-queries">Media queries</h3>
     <p>我们用如下的media queries在我们的 LESS文件中，以便在我们的网格系统中创建关键的载入点。</p>
@@ -96,7 +96,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3 id="grid-options">网格选项</h3>
-    <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+    <p>看网格系统怎样兼容多种设备。</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
@@ -123,11 +123,11 @@ base_url: "../"
         <tbody>
           <tr>
             <th>网格系统行为</th>
-            <td>Horizontal at all times</td>
+            <td>水平伸展优先</td>
             <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
           </tr>
           <tr>
-            <th>Max container width</th>
+            <th>最大容器宽度</th>
             <td>None (auto)</td>
             <td>750px</td>
             <td>970px</td>
@@ -141,18 +141,18 @@ base_url: "../"
             <td><code>.col-lg-</code></td>
           </tr>
           <tr>
-            <th># of columns</th>
+            <th>网格数目</th>
             <td colspan="4">12</td>
           </tr>
           <tr>
-            <th>Max column width</th>
+            <th>最大格子宽度</th>
             <td class="text-muted">Auto</td>
             <td>60px</td>
             <td>78px</td>
             <td>95px</td>
           </tr>
           <tr>
-            <th>Gutter width</th>
+            <th>网格间距宽度</th>
             <td colspan="4">30px (15px on each side of a column)</td>
           </tr>
           <tr>
@@ -165,7 +165,7 @@ base_url: "../"
             <td colspan="3">Yes</td>
           </tr>
           <tr>
-            <th>Column ordering</th>
+            <th>列可排序</th>
             <td class="text-muted">N/A</td>
             <td colspan="3">Yes</td>
           </tr>
@@ -870,7 +870,7 @@ base_url: "../"
     <h2 id="type-lists">列表</h2>
 
     <h3>无序列表</h3>
-    <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+    <p>无序排列的一系列条目，顺序<em>不是</em> 首要关心的问题</p>
     <div class="bs-example">
       <ul>
         <li>Lorem ipsum dolor sit amet</li>
@@ -897,7 +897,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3>有序列表</h3>
-    <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+    <p>有序排列的一系列条目，顺序 <em>是</em> 重要的</p>
     <div class="bs-example">
       <ol>
         <li>Lorem ipsum dolor sit amet</li>
@@ -917,7 +917,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3>无样式列表</h3>
-    <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+    <p>删除缺省的 <code>list-style</code> 样式，and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
     <div class="bs-example">
       <ul class="list-unstyled">
         <li>Lorem ipsum dolor sit amet</li>
@@ -943,8 +943,8 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h3>Inline</h3>
-    <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
+    <h3>行内显示</h3>
+    <p>放置所有条目在一行之内，用 <code>display: inline-block;</code> 和某些明显的 padding.</p>
     <div class="bs-example">
       <ul class="list-inline">
         <li>Lorem ipsum</li>
@@ -1001,7 +1001,7 @@ base_url: "../"
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-info">
-      <h4>Auto-truncating</h4>
+      <h4>自动截断</h4>
       <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
     </div>
   </div>
@@ -1023,8 +1023,8 @@ base_url: "../"
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
-    <h2>Basic block</h2>
-    <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+    <h2>基本块</h2>
+    <p>用 <code>&lt;pre&gt;</code> 为多行代码。为了正确呈现代码，应将代码中的尖括号用转义符转义</p>
 <div class="bs-example">
   <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
 </div>
@@ -1032,7 +1032,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
 {% endhighlight %}
 
-    <p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+    <p>也可以选择添加 <code>.pre-scrollable</code> class,来设置代码段最高 max-height 350px，提供垂直方向滚动条。</p>
   </div>
 
 
@@ -1041,7 +1041,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="tables">Tables</h1>
+      <h1 id="tables">表格</h1>
     </div>
 
     <h2 id="tables-example">基本例子</h2>
@@ -1131,7 +1131,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h2 id="tables-bordered">有边框的表格</h2>
-    <p>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+    <p>添加 <code>.table-bordered</code> 在表格和单元格中显示边框</p>
     <div class="bs-example">
       <table class="table table-bordered">
         <thead>
@@ -1175,7 +1175,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="tables-hover-rows">Hover rows</h2>
+    <h2 id="tables-hover-rows">悬停效果行</h2>
     <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
     <div class="bs-example">
       <table class="table table-hover">
@@ -1501,7 +1501,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Check me out
+            <input type="checkbox">选择我
           </label>
         </div>
         <button type="submit" class="btn btn-default">引用块</button>
@@ -1524,7 +1524,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox"> Check me out
+      <input type="checkbox">选择我
     </label>
   </div>
   <button type="submit" class="btn btn-default">引用块</button>
@@ -1539,7 +1539,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <p>Inputs, selects, 和 textareas 部件宽度默认是 100%。To use the inline form, you'll have to set a width on the form controls used within.</p>
     </div>
     <div class="bs-callout bs-callout-danger">
-      <h4>Always add labels</h4>
+      <h4>总是添加标签</h4>
       <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class.</p>
     </div>
     <div class="bs-example">
@@ -1580,7 +1580,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="forms-horizontal">Horizontal form</h2>
+    <h2 id="forms-horizontal">水平排版表单</h2>
     <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
     <div class="bs-example">
       <form class="form-horizontal">
@@ -2489,8 +2489,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     </div>
 
 
-    <h2 id="responsive-utilities-print">Print classes</h2>
-    <p>Similar to the regular responsive classes, use these for toggling content for print.</p>
+    <h2 id="responsive-utilities-print">打印类</h2>
+    <p>类似与标准的自适应类，用来触发好的打印输出。</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped responsive-utilities">
         <thead>
@@ -2516,27 +2516,27 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     </div>
 
 
-    <h2 id="responsive-utilities-tests">Test cases</h2>
-    <p>Resize your browser or load on different devices to test the responsive utility classes.</p>
+    <h2 id="responsive-utilities-tests">测试样例</h2>
+    <p>改变浏览器窗口大小，或者用不同尺寸设备访问，来测试自适应应用类</p>
 
     <h3>可视…</h3>
-    <p>Green checkmarks indicate the element <strong>is visible</strong> in your current viewport.</p>
+    <p>绿色标记表明该部件 <strong>是可视的</strong></p>
     <div class="row responsive-utilities-test visible-on">
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-xs">Extra small</span>
+        <span class="hidden-xs">微小设备</span>
         <span class="visible-xs">&#10004; Visible on x-small</span>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-sm">Small</span>
+        <span class="hidden-sm">小设备</span>
         <span class="visible-sm">&#10004; Visible on small</span>
       </div>
       <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-md">Medium</span>
+        <span class="hidden-md">中等设备</span>
         <span class="visible-md">&#10004; Visible on medium</span>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-lg">Large</span>
+        <span class="hidden-lg">大设备</span>
         <span class="visible-lg">&#10004; Visible on large</span>
       </div>
     </div>
@@ -2570,23 +2570,23 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     </div>
 
     <h3>隐藏…</h3>
-    <p>Here, green checkmarks also indicate the element <strong>is hidden</strong> in your current viewport.</p>
+    <p>注意，这里绿色标记指明该部件 <strong>是隐藏的</strong> </p>
     <div class="row responsive-utilities-test hidden-on">
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-xs">Extra small</span>
+        <span class="hidden-xs">微小设备</span>
         <span class="visible-xs">&#10004; Hidden on x-small</span>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-sm">Small</span>
+        <span class="hidden-sm">小设备</span>
         <span class="visible-sm">&#10004; Hidden on small</span>
       </div>
       <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-md">Medium</span>
+        <span class="hidden-md">中等设备</span>
         <span class="visible-md">&#10004; Hidden on medium</span>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <span class="hidden-lg">Large</span>
+        <span class="hidden-lg">大设备</span>
         <span class="visible-lg">&#10004; Hidden on large</span>
       </div>
     </div>
