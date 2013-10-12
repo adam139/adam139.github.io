@@ -740,7 +740,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3>强调 classes</h3>
-    <p>采用少量的强调classes,通过不同的颜色来传达不同的含义。 These may also be applied to links and will darken on hover just like our default link styles.</p>
+    <p>采用少量的强调classes,通过不同的颜色来传达不同的含义。 也可以应用到链接，当悬停时，变暗，就像缺省的链接样式。</p>
     <div class="bs-example">
       <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
       <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -758,7 +758,7 @@ base_url: "../"
 <p class="text-danger">...</p>
 {% endhighlight %}
     <div class="bs-callout bs-callout-info">
-      <h4>Dealing with specificity</h4>
+      <h4>特殊情况处理</h4>
       <p>Sometimes emphasis classes cannot be applied due to the specificity of another selector. In most cases, a sufficient workaround is to wrap your text in a <code>&lt;span&gt;</code> with the class.</p>
     </div>
 
@@ -770,7 +770,7 @@ base_url: "../"
     <h3>基本缩写</h3>
     <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute with the <code>&lt;abbr&gt;</code> element.</p>
     <div class="bs-example">
-      <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+      <p>单词attribute的缩写是 <abbr title="attribute">attr</abbr>.</p>
     </div>
 {% highlight html %}
 <abbr title="attribute">attr</abbr>
@@ -818,9 +818,9 @@ base_url: "../"
 
     <!-- 引用块 -->
     <h2 id="type-blockquotes">引用块</h2>
-    <p>For quoting blocks of content from another source within your document.</p>
+    <p>在你的文档中，对引用的块内容注释来源。</p>
 
-    <h3>Default blockquote</h3>
+    <h3>缺省引用块</h3>
     <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
     <div class="bs-example">
       <blockquote>
@@ -834,10 +834,10 @@ base_url: "../"
 {% endhighlight %}
 
     <h3>引用块选项</h3>
-    <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
+    <p>样式及内容的简单变化基于标准的<code>&lt;blockquote&gt;</code>.</p>
 
-    <h4>Naming a source</h4>
-    <p>Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+    <h4>命名一个源</h4>
+    <p>添加 <code>&lt;small&gt;</code> 标记来表明来源。放置源的名称在 <code>&lt;cite&gt;</code>中</p>
     <div class="bs-example">
       <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -851,8 +851,8 @@ base_url: "../"
 </blockquote>
 {% endhighlight %}
 
-    <h4>Alternate displays</h4>
-    <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
+    <h4>其他显示式样</h4>
+    <p>用 <code>.pull-right</code> 来做一个浮动的，右对齐的引用块。</p>
     <div class="bs-example" style="overflow: hidden;">
       <blockquote class="pull-right">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -917,7 +917,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3>无样式列表</h3>
-    <p>删除缺省的 <code>list-style</code> 样式，and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+    <p>删除缺省的 <code>list-style</code> 样式，清空左边距 (immediate children only). <strong>这仅仅应用到直接的子级别list items</strong></p>
     <div class="bs-example">
       <ul class="list-unstyled">
         <li>Lorem ipsum dolor sit amet</li>
@@ -958,12 +958,12 @@ base_url: "../"
 </ul>
 {% endhighlight %}
 
-    <h3>Description</h3>
-    <p>A list of terms with their associated descriptions.</p>
+    <h3>描述列表</h3>
+    <p>带描述的相关术语的一个列表。</p>
     <div class="bs-example">
       <dl>
-        <dt>Description lists</dt>
-        <dd>A description list is perfect for defining terms.</dd>
+        <dt>术语</dt>
+        <dd>该术语的详细描述</dd>
         <dt>Euismod</dt>
         <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
         <dd>Donec id elit non mi porta gravida at eget metus.</dd>
@@ -978,7 +978,7 @@ base_url: "../"
 </dl>
 {% endhighlight %}
 
-    <h4>Horizontal description</h4>
+    <h4>水平描述</h4>
     <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
     <div class="bs-example">
       <dl class="dl-horizontal">
@@ -1002,7 +1002,7 @@ base_url: "../"
 
     <div class="bs-callout bs-callout-info">
       <h4>自动截断</h4>
-      <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+      <p>水平描述列表将截断术语，当该术语太长，超过了左边列宽度 <code>text-overflow</code>. 在较窄的视点设备下，他们将更改回缺省的堆叠模式。</p>
     </div>
   </div>
 
@@ -1011,13 +1011,13 @@ base_url: "../"
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="code">Code</h1>
+      <h1 id="code">代码</h1>
     </div>
 
     <h2>行内样式</h2>
-    <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+    <p>包装在一行内的小片代码用 <code>&lt;code&gt;</code>.</p>
 <div class="bs-example">
-  For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+  对于包装一个代码段在一行内用 <code>&lt;section&gt;</code>。
 </div>
 {% highlight html %}
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
@@ -1045,7 +1045,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     </div>
 
     <h2 id="tables-example">基本例子</h2>
-    <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
+    <p>表格基本样式&mdash;明显的内边距和仅仅水平方向的分割符&mdash;添加基类 <code>.table</code> 到任意 <code>&lt;table&gt;</code>中。它看起来显得多余 ，但在为表格提供其他JS插件支持时有用。 </p>
     <div class="bs-example">
       <table class="table">
         <thead>
@@ -1085,11 +1085,11 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
 
-    <h2 id="tables-striped">Striped rows</h2>
-    <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+    <h2 id="tables-striped">斑纹行</h2>
+    <p>用 <code>.table-striped</code>添加斑纹行效果到任意位于 <code>&lt;tbody&gt;</code>里面的表格行。</p>
     <div class="bs-callout bs-callout-danger">
       <h4>跨浏览器兼容</h4>
-      <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
+      <p>斑纹行表格是通过 <code>:nth-child</code> CSS selector实现的, Internet Explorer 8不支持。</p>
     </div>
     <div class="bs-example">
       <table class="table table-striped">
@@ -1176,7 +1176,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h2 id="tables-hover-rows">悬停效果行</h2>
-    <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+    <p>添加<code>.table-hover</code> 启用位于<code>&lt;tbody&gt;</code>的表格行悬停状态</p>
     <div class="bs-example">
       <table class="table table-hover">
         <thead>
@@ -1479,7 +1479,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="forms">Forms</h1>
+      <h1 id="forms">表单</h1>
     </div>
 
     <h2 id="forms-example">基本例子</h2>
@@ -1581,7 +1581,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h2 id="forms-horizontal">水平排版表单</h2>
-    <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
+    <p>用 Bootstrap的预定义的网格系统对齐标签和表单控件在一个水平布局模式中，可以添加 <code>.form-horizontal</code> 到该表单。. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
     <div class="bs-example">
       <form class="form-horizontal">
         <div class="form-group">
@@ -2147,10 +2147,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h2 id="buttons-disabled">禁用状态</h2>
-    <p>Make buttons look unclickable by fading them back 50%.</p>
+    <p>使得按钮不可点击</p>
 
     <h3>按钮部件</h3>
-    <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+    <p>添加这个 <code>disabled</code> 属性到 <code>&lt;button&gt;</code> 按钮</p>
     <p class="bs-example">
       <button type="button" class="btn btn-primary btn-lg" disabled="disabled">主按钮</button>
       <button type="button" class="btn btn-default btn-lg" disabled="disabled">按钮</button>
@@ -2216,10 +2216,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
       <h1 id="images">图片</h1>
     </div>
 
-    <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
+    <p>添加 classes 到 <code>&lt;img&gt;</code> 部件来方便地方式化图片。</p>
     <div class="bs-callout bs-callout-danger">
       <h4>跨浏览器兼容</h4>
-      <p>Keep in mind that Internet Explorer 8 lacks support for rounded corners.</p>
+      <p>请注意Internet Explorer 8 消极支持园角。</p>
     </div>
     <div class="bs-example bs-example-images">
       <img data-src="holder.js/140x140" src="data:image/png;base64," class="img-rounded" alt="A generic square placeholder image with rounded corners">
@@ -2249,7 +2249,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-close">关闭图标</h3>
-    <p>Use the generic close icon for dismissing content like modals and alerts.</p>
+    <p>用一个通常的关闭图标来关闭内容</p>
     <div class="bs-example">
       <p><button type="button" class="close" aria-hidden="true">&times;</button></p>
     </div>
@@ -2259,7 +2259,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-floats">快速浮动</h3>
-    <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
+    <p>用一个class 浮动部件到左边或右边，用 <code>!important</code> 到CSS来避免特别的意外。这种 Classes也能用在混合模式中。</p>
 {% highlight html %}
 <div class="pull-left">...</div>
 <div class="pull-right">...</div>
@@ -2336,8 +2336,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-show-hide">显示或隐藏内容</h3>
-    <p>强制一个部件被显示或隐藏(<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="../css/#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
-    <p><code>.hide</code> is also available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p>
+    <p>强制一个部件被显示或隐藏(<strong>包括为屏幕阅读器</strong>) 采用 <code>.show</code> 和 <code>.hidden</code> classes。这些类用 <code>!important</code> 来避免可能的冲突意外。就像 <a href="../css/#helper-classes-floats">快速浮动</a>一样。它们仅仅对块部件有效，同样可以用在混合类模式。</p>
+    <p><code>.hide</code> 也有效，但有时对屏幕阅读器失效，并且已被降级使用。 用 <code>.hidden</code> 或者 <code>.sr-only</code> 代替。</p>
 {% highlight html %}
 <div class="show">...</div>
 <div class="hidden">...</div>
@@ -2363,7 +2363,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-screen-readers">屏幕阅读内容</h3>
-    <p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Necessary for following <a href="{{ page.base_url }}getting-started#accessibility">accessibility best practices</a>. Can also be used as a mixin.</p>
+    <p>对所有设备（屏幕阅读器除外）隐藏一个部件，可以用 <code>.sr-only</code>. 可以参考 <a href="{{ page.base_url }}getting-started#accessibility">可访问性最佳体念</a>。能用在混合类模式中。</p>
 {% highlight html %}
 <a class="sr-only" href="#content">跳到主内容</a>
 {% endhighlight %}
@@ -2376,7 +2376,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h3 id="helper-classes-image-replacement">图片代用</h3>
-    <p>Utilize the <code>.text-hide</code> class or mixin to help replace an element's text content with a background image.</p>
+    <p>应用这个 <code>.text-hide</code> class 或者该类的混合模式，可以用来拿背景图片替换部件的文本内容。</p>
 {% highlight html %}
 <h1 class="text-hide">Custom heading</h1>
 {% endhighlight %}
@@ -2396,11 +2396,11 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <div class="page-header">
       <h1>自适应应用</h1>
     </div>
-    <p class="lead">For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.</p>
-    <p>Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. <strong>Responsive utilities are currently only available for block and table toggling.</strong> Use with inline and table elements is currently not supported.</p>
+    <p class="lead">为快速进行移动友好的开发, 用这些应用 classes来根据设备来决定显示和隐藏内容。也包括为内容打印的应用 classes。</p>
+    <p>Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. <strong>自适应应用当前仅仅支持块级部件和表格</strong> ，行内模式和表格部件当前不被支持。</p>
 
 
-    <h2 id="responsive-utilities-classes">Available classes</h2>
+    <h2 id="responsive-utilities-classes">有效的classes</h2>
     <p>Use a single or combination of the available classes for toggling content across viewport breakpoints.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped responsive-utilities">
