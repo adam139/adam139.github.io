@@ -1857,13 +1857,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p>
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Link functionality of <code>&lt;a&gt;</code> not impacted</h4>
+      <h4><code>&lt;a&gt;</code> 的链接功能不受影响。</h4>
       <p>This class will only change the appearance of <code>&lt;a class="btn btn-default"&gt;</code> buttons, not their functionality. Use custom JavaScript to disable links here.</p>
     </div>
 
     <div class="bs-callout bs-callout-danger">
       <h4>跨浏览器兼容</h4>
-      <p>While Bootstrap will apply these styles in all browsers, Internet Explorer 9 and below don't actually support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
+      <p>Internet Explorer 9 及以下不支持<code>disabled</code> 属性，在一个 <code>&lt;fieldset&gt;</code>里面。解决办法是用定制的 JavaScript 取消这个字段集。</p>
     </div>
 
     <div class="bs-example">
@@ -1947,10 +1947,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 
     <h2 id="forms-control-sizes">控制大小</h2>
-    <p>Set heights using classes like <code>.input-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
+    <p>设置高度用 这样的类 <code>.input-lg</code>, 设置宽度用网格列类，象 <code>.col-lg-*</code>。</p>
 
     <h3>高度控制</h3>
-    <p>Create larger or smaller form controls that match button sizes.</p>
+    <p>创建更大的或更小的表单控件来匹配按钮大小。</p>
     <div class="bs-example bs-example-control-sizing">
       <form role="form">
         <div class="controls">
@@ -1980,7 +1980,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <select class="form-control input-sm">...</select>
 {% endhighlight %}
 
-    <h3>Column sizing</h3>
+    <h3>定制大小</h3>
     <p>将inputs放在网格列中，或者放在任意可定制的父亲部件，能够容易的获得希望的宽度。</p>
     <div class="bs-example">
       <form role="form">
@@ -2012,15 +2012,15 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endhighlight %}
 
     <h2 id="forms-help-text">帮助文本</h2>
-    <p>Block level help text for form controls.</p>
+    <p>块级别帮助文本为表单控件。</p>
     <div class="bs-example">
       <form role="form">
         <input type="text" class="form-control">
-        <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-block">帮助文本块可以转换到新行，可以扩展到超过一行</span>
       </form>
     </div><!-- /.bs-example -->
 {% highlight html %}
-<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+<span class="help-block">帮助文本块可以转换到新行，可以扩展到超过一行</span>
 {% endhighlight %}
 
   </div>
@@ -2068,8 +2068,8 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <button type="button" class="btn btn-link">链接按钮</button>
 {% endhighlight %}
 
-    <h2 id="buttons-sizes">Sizes</h2>
-    <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
+    <h2 id="buttons-sizes">大小</h2>
+    <p>想要更大或者更小的按钮？添加 <code>.btn-lg</code>, <code>.btn-sm</code>, 或者 <code>.btn-xs</code> 为需要的大小。</p>
     <div class="bs-example">
       <p>
         <button type="button" class="btn btn-primary btn-lg">大按钮</button>
@@ -2162,11 +2162,11 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
     <div class="bs-callout bs-callout-danger">
       <h4>跨浏览器兼容</h4>
-      <p>If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.</p>
+      <p>如果你添加 <code>disabled</code> 属性到一个 <code>&lt;button&gt;</code>, Internet Explorer 9 及以下版本将呈现灰色文本，并带一个nasty text-shadow that we cannot fix.</p>
     </div>
 
     <h3>锚点部件</h3>
-    <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+    <p>添加 <code>.disabled</code> class 到 <code>&lt;a&gt;</code> 按钮</p>
     <p class="bs-example">
       <a href="#" class="btn btn-primary btn-lg disabled" role="button">主链接</button>
       <a href="#" class="btn btn-default btn-lg disabled" role="button">链接</a>
@@ -2176,16 +2176,16 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <a href="#" class="btn btn-default btn-lg disabled" role="button">链接</a>
 {% endhighlight %}
     <p>
-      We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.
+      我们用 <code>.disabled</code> 作为一个应用class here, 类似于 <code>.active</code> class, 不要求有前缀 。
     </p>
     <div class="bs-callout bs-callout-warning">
-      <h4>Link functionality not impacted</h4>
-      <p>This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.</p>
+      <h4>链接功能不受影响</h4>
+      <p>这个类仅仅更改 <code>&lt;a&gt;</code>的显示特性，而不会影响其功能，可以定制 JavaScript  来取消该链接。</p>
     </div>
 
 
-    <h2 id="buttons-tags">Button tags</h2>
-    <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+    <h2 id="buttons-tags">按钮标签</h2>
+    <p> 在一个<code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, 或者 <code>&lt;input&gt;</code> 部件里使用按钮类。</p>
     <form class="bs-example">
       <a class="btn btn-default" href="#" role="button">链接</a>
       <button class="btn btn-default" type="submit">按钮</button>
