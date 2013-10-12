@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CSS
+title: Bootstrap 基本CSS
 slug: css
 lead: "全局 CSS 设置，通过扩展的CSS类来样式化并优化基本的 HTML 部件，以及一个高级的网格系统。"
 base_url: "../"
@@ -36,7 +36,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3 id="overview-responsive-images">自适应图片</h3>
-    <p>在Bootstrap 3 中，图片能够很好地自适应窗口变化，加<code>.img-responsive</code> 类即可。 This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
+    <p>在Bootstrap 3 中，图片能够很好地自适应窗口变化，加<code>.img-responsive</code> 类即可。 这个类实际上是应用了 <code>max-width: 100%;</code> 和 <code>height: auto;</code> 到图片对象，从而让其自的扩展到父容器部件。</p>
 {% highlight html %}
 <img src="..." class="img-responsive" alt="Responsive image">
 {% endhighlight %}
@@ -75,19 +75,19 @@ base_url: "../"
     <h3 id="grid-media-queries">Media queries</h3>
     <p>我们用如下的media queries在我们的 LESS文件中，以便在我们的网格系统中创建关键的载入点。</p>
 {% highlight css %}
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* 非常小的设备 (phones, less than 768px) */
+/* 没有媒体查询规则，这是在 Bootstrap3 中默认的 */
 
-/* Small devices (tablets, 768px and up) */
+/* 小设备 (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { ... }
 
-/* Medium devices (desktops, 992px and up) */
+/* 中等设备(desktops, 992px and up) */
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) */
+/* 大设备 (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
-    <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
+    <p>我们有时也扩展媒体查询包括一个 <code>max-width</code> 以设置CSS被应用到指定的最小、最大的宽度空间的所有设备。</p>
 {% highlight css %}
 @media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
@@ -172,10 +172,10 @@ base_url: "../"
         </tbody>
       </table>
     </div>
-    <p>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any <code>.col-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-</code> class is not present.</p>
+    <p>当屏幕宽度大于或等于媒体查询语句当中载入点指定的尺寸时，该查询集下的网格类被应用到该设备,同时，这些网格类也将覆盖那些以更小尺寸为目标设备的网格类。因此，当应用任何 <code>.col-md-</code> class到一个部件时，不仅仅影响中等大小的设备， 而且也影响所有没有设置 <code>.col-lg-</code> class 的该部件。</p>
 
-    <h3 id="grid-example-basic">样例: Stacked-to-horizontal</h3>
-    <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices.</p>
+    <h3 id="grid-example-basic">样例: 堆叠-到-水平展开</h3>
+    <p>用<code>.col-md-*</code> 网格 classes 的一个简单集合，可以创建一个基本的网格系统 (the extra small to small range)，当在移动设备或平板设备时，堆叠；当在桌面设备时，被水平展开。</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
         <div class="col-md-1">.col-md-1</div>
@@ -236,7 +236,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3 id="grid-example-mixed">样例: 移动设备和桌面电脑</h3>
-    <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
+    <p>不想你的列在更小的设备中被简单堆叠，添加 <code>.col-xs-*</code> <code>.col-md-*</code> 到你的列。好好看下面的例子，来理解是如何工作的。</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
         <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
@@ -253,20 +253,20 @@ base_url: "../"
       </div>
     </div>
 {% highlight html %}
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<!-- 在移动设备上，该列被完全展开（占据屏幕100%宽度），在其他较大设备上，占据一半宽度-->
 <div class="row">
   <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<!-- 移动设备占据 50% 宽度，桌面设备占据最多 33.3%宽度 -->
 <div class="row">
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns are always 50% wide, on mobile and desktop -->
+<!-- 在移动设备或桌面设备，列总是占据 50% 宽度 -->
 <div class="row">
   <div class="col-xs-6">.col-xs-6</div>
   <div class="col-xs-6">.col-xs-6</div>
@@ -274,7 +274,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3 id="grid-example-mixed-complete">样例: 移动设备、平板电脑和桌面电脑</h3>
-    <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
+    <p>基于前面的样例，用<code>.col-sm-*</code> classes可以在平板设备上创建更动态、更强大的布局。</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
         <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
@@ -331,7 +331,7 @@ base_url: "../"
 
 
     <h3 id="grid-offsetting">偏移列</h3>
-    <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
+    <p>移动列到较右边的位置，可以用 <code>.col-md-offset-*</code> classes. 这实际上是增加该列左边距 <code>*</code>个列宽。例如， <code>.col-md-offset-4</code> 将移动 <code>.col-md-4</code>横跨四个单位列宽。</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
         <div class="col-md-4">.col-md-4</div>
@@ -361,7 +361,7 @@ base_url: "../"
 
 
     <h3 id="grid-nesting">嵌套列</h3>
-    <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-md-*</code> columns within an existing <code>.col-md-*</code> column. Nested rows should include a set of columns that add up to 12.</p>
+    <p>对于嵌套网格系统，添加一个新的 <code>.row</code> 和一系列 <code>.col-md-*</code> 列到一个已存在的 <code>.col-md-*</code> 列下。 被嵌套的行下面能包括的列数之和最多12个。</p>
     <div class="row show-grid">
       <div class="col-md-9">
         第一层： .col-md-9
@@ -408,7 +408,7 @@ base_url: "../"
     <h3 id="grid-less">采用LESS系统并引入变量</h3>
     <p>In addition to <a href="#grid-example-basic">prebuilt grid classes</a> for fast layouts, Bootstrap includes LESS variables and mixins for quickly generating your own simple, semantic layouts.</p>
 
-    <h4>Variables</h4>
+    <h4>变量</h4>
     <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
 {% highlight css %}
 @grid-columns:              12;
@@ -416,8 +416,8 @@ base_url: "../"
 @grid-float-breakpoint:     768px;
 {% endhighlight %}
 
-    <h4>Mixins</h4>
-    <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
+    <h4>混合</h4>
+    <p>混合可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。我们还可以带参数地调用，就像使用函数一样。在Bootstrap中，混合被用来结合网格变量为独立的网格生成更具语义性CSS（LESS）。</p>
 {% highlight css %}
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
@@ -600,15 +600,15 @@ base_url: "../"
             <td class="info">Semibold 30px</td>
           </tr>
           <tr>
-            <td><h3>h3. python是很强大的语言</h3></td>
+            <td><h3>h3. Zope是很好的WEB应用服务器</h3></td>
             <td class="info">Semibold 24px</td>
           </tr>
           <tr>
-            <td><h4>h4. Bootstrap heading</h4></td>
+            <td><h4>h4. python是很强大的语言</h4></td>
             <td class="info">Semibold 18px</td>
           </tr>
           <tr>
-            <td><h5>h5. Bootstrap heading</h5></td>
+            <td><h5>h5. 我们是专业的WEB应用开发公司</h5></td>
             <td class="info">Semibold 14px</td>
           </tr>
           <tr>
@@ -627,38 +627,38 @@ base_url: "../"
 <h6>h6. Bootstrap heading</h6>
 {% endhighlight %}
 
-    <p>Also included with headings is an autoscaling <code>&lt;small&gt;</code> element. Use it for smaller, gray secondary text in any heading.</p>
+    <p>标题中也可以包括一个自动伸缩的<code>&lt;small&gt;</code> 部件，这个通常用在标题中较小的，第二位的文本。</p>
     <div class="bs-example bs-example-type">
       <table class="table">
         <tbody>
           <tr>
-            <td><h1>h1. Bootstrap heading <small>Secondary text</small></h1></td>
+            <td><h1>h1. Bootstrap heading <small>第二位的文本</small></h1></td>
           </tr>
           <tr>
-            <td><h2>h2. Bootstrap heading <small>Secondary text</small></h2></td>
+            <td><h2>h2. Bootstrap heading <small>第二位的文本</small></h2></td>
           </tr>
           <tr>
-            <td><h3>h3. Bootstrap heading <small>Secondary text</small></h3></td>
+            <td><h3>h3. Bootstrap heading <small>第二位的文本</small></h3></td>
           </tr>
           <tr>
-            <td><h4>h4. Bootstrap heading <small>Secondary text</small></h4></td>
+            <td><h4>h4. Bootstrap heading <small>第二位的文本</small></h4></td>
           </tr>
           <tr>
-            <td><h5>h5. Bootstrap heading <small>Secondary text</small></h5></td>
+            <td><h5>h5. Bootstrap heading <small>第二位的文本</small></h5></td>
           </tr>
           <tr>
-            <td><h6>h6. Bootstrap heading <small>Secondary text</small></h6></td>
+            <td><h6>h6. Bootstrap heading <small>第二位的文本</small></h6></td>
           </tr>
         </tbody>
       </table>
     </div>
 {% highlight html %}
-<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
-<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
-<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
-<h4>h4. Bootstrap heading <small>Secondary text</small></h4>
-<h5>h5. Bootstrap heading <small>Secondary text</small></h5>
-<h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+<h1>h1. Bootstrap heading <small>第二位的文本</small></h1>
+<h2>h2. Bootstrap heading <small>第二位的文本</small></h2>
+<h3>h3. Bootstrap heading <small>第二位的文本</small></h3>
+<h4>h4. Bootstrap heading <small>第二位的文本</small></h4>
+<h5>h5. Bootstrap heading <small>第二位的文本</small></h5>
+<h6>h6. Bootstrap heading <small>第二位的文本</small></h6>
 {% endhighlight %}
 
 
@@ -675,8 +675,8 @@ base_url: "../"
 {% endhighlight %}
 
     <!-- Body copy .lead -->
-    <h3>Lead body copy</h3>
-    <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+    <h3>正文首要段</h3>
+    <p>给一个段落加 <code>.lead</code>标记，表明该段是首要的，从其他段落突显出来。</p>
     <div class="bs-example">
       <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
     </div>
@@ -704,7 +704,7 @@ base_url: "../"
 
 
     <h3>粗体</h3>
-    <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+    <p>采用较粗的字体强调部分文本</p>
     <div class="bs-example">
       <p>下面的文本是 <strong>作为粗体文本呈现</strong>.</p>
     </div>
@@ -740,7 +740,7 @@ base_url: "../"
 {% endhighlight %}
 
     <h3>强调 classes</h3>
-    <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
+    <p>采用少量的强调classes,通过不同的颜色来传达不同的含义。 These may also be applied to links and will darken on hover just like our default link styles.</p>
     <div class="bs-example">
       <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
       <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -833,7 +833,7 @@ base_url: "../"
 </blockquote>
 {% endhighlight %}
 
-    <h3>Blockquote options</h3>
+    <h3>引用块选项</h3>
     <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
 
     <h4>Naming a source</h4>
