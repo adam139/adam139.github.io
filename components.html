@@ -1410,15 +1410,15 @@ base_url: "../"
     </div>
 
     <h2 id="navbar-default">缺省导航条</h2>
-    <p>导航s are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
+    <p>导航条在您的应用或站点当中作为导航头（主菜单）。在移动设备视图中，他们开始时是折叠的（可触发展开），随着视点设备宽度的增加，而水平展开。</p>
 
     <div class="bs-callout bs-callout-info">
-      <h4>Customize the collapsing point</h4>
-      <p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the <code>@grid-float-breakpoint</code> variable or add your own media query.</p>
+      <h4>定制折叠点</h4>
+      <p>取决与导航条中的内容，你也许要更改导航条在折叠和展开两种状态切换的出发点，添加你自己的媒体查询，定制 <code>@grid-float-breakpoint</code> 变量。</p>
     </div>
     <div class="bs-callout bs-callout-warning" id="multiple-navbars-warning">
-      <h4>Multiple navbars require custom code</h4>
-      <p>Multiple nearby navbars with dropdown menus are not supported by default. You will need to override the <code>z-index</code>es of the dropdown menus yourself. Otherwise, the dropdown menu will display behind the other navbar.</p>
+      <h4>多个导航条需要某些定制</h4>
+      <p>邻近的多个导航条默认是不被支持的。将需要定制你的下拉菜单的 <code>z-index</code>es 的值， 否则，这个下拉菜单将显示在其他下导航条的后面。</p>
     </div>
 
     <div class="bs-example">
@@ -1530,16 +1530,16 @@ base_url: "../"
 
 <div class="bs-callout bs-callout-danger">
   <h4>插件依存性</h4>
-  <p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
+  <p>响应式导航条要求 <a href="../javascript/#collapse">折叠插件</a> 支持。</p>
 </div>
 
 <div class="bs-callout bs-callout-warning">
-  <h4>Make navbars accessible</h4>
-  <p>Be sure to add a <code>role="navigation"</code> to every navbar to help with accessibility.</p>
+  <h4>保障导航条的访问性</h4>
+  <p>确认在每个导航条中添加一个 <code>role="navigation"</code> ，以确保导航条的可访问性。</p>
 </div>
 
 
-    <h2 id="navbar-forms">表单</h2>
+    <h2 id="navbar-forms">导航条中的表单</h2>
     <p>Place form content within <code>.navbar-form</code> for proper vertical alignment and collapsed behavior in narrow viewports. Use the alignment options to decide where it resides within the navbar content.</p>
     <p>As a heads up, <code>.navbar-form</code> shares much of its code with <code>.form-inline</code> via mixin.</p>
     <div class="bs-example">
@@ -1558,7 +1558,7 @@ base_url: "../"
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">引用块</button>
+            <button type="submit" class="btn btn-default">搜索</button>
           </form>
         </div>
       </nav>
@@ -1578,7 +1578,7 @@ base_url: "../"
 </div>
 
 
-    <h2 id="navbar-buttons">按钮</h2>
+    <h2 id="navbar-buttons">导航条按钮</h2>
     <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
     <div class="bs-example">
       <nav class="navbar navbar-default" role="navigation">
@@ -1601,7 +1601,7 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h2 id="navbar-text">Text</h2>
+    <h2 id="navbar-text">导航条文本</h2>
     <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
     <div class="bs-example">
       <nav class="navbar navbar-default" role="navigation">
@@ -1647,7 +1647,7 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h2 id="navbar-component-alignment">部件对齐</h2>
+    <h2 id="navbar-component-alignment">导航条部件对齐</h2>
     <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
     <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
 
@@ -1685,7 +1685,7 @@ base_url: "../"
 
     <div class="bs-callout bs-callout-danger">
       <h4>Body内边距要求</h4>
-      <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the top of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
+      <p>这个固定位置导航条将遮盖部分其他内容，除非添加 <code>padding</code> 到 <code>&lt;body&gt;</code>的上部。根据实际情况更改下面CSS代码padding的值，提示：缺省，导航条的高度是50像素</p>
 {% highlight css %}
 body { padding-top: 70px; }
 {% endhighlight %}
@@ -1726,7 +1726,7 @@ body { padding-top: 70px; }
 
     <div class="bs-callout bs-callout-danger">
       <h4>Body内边距要求</h4>
-      <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the bottom of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
+      <p>这个固定位置导航条将遮盖部分其他内容，除非添加 <code>padding</code> 到 <code>&lt;body&gt;</code>的下部。根据实际情况更改下面CSS代码padding的值，提示：缺省，导航条的高度是50像素</p>
 {% highlight css %}
 body { padding-bottom: 70px; }
 {% endhighlight %}
@@ -1807,7 +1807,7 @@ body { padding-bottom: 70px; }
     <div class="page-header">
       <h1 id="breadcrumbs">Breadcrumbs <small></small></h1>
     </div>
-    <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
+    <p class="lead">在导航层次中，指明当前页面的位置，同时，方便导航。</p>
     <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
     <div class="bs-example">
       <ol class="breadcrumb">
