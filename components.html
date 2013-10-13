@@ -552,8 +552,8 @@ base_url: "../"
     <p>使得一组按钮伸缩到同样大小，并扩展到父容器的整个宽度。</p>
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Element-specific usage</h4>
-      <p>This only works with <code>&lt;a&gt;</code> elements as the <code>&lt;button&gt;</code> doesn't pick up these styles.</p>
+      <h4>部件特别的应用</h4>
+      <p>这个仅仅在 <code>&lt;a&gt;</code> 部件里面有效，在 <code>&lt;button&gt;</code> 里面不能应用这些样式。</p>
     </div>
 
     <div class="bs-example">
@@ -666,8 +666,8 @@ base_url: "../"
 </div>
 {% endhighlight %}
 
-    <h3 id="btn-dropdowns-split">Split button dropdowns</h3>
-    <p>Similarly, create split button dropdowns with the same markup changes, only with a separate button.</p>
+    <h3 id="btn-dropdowns-split">分离按钮下拉菜单</h3>
+    <p>类似的，可以创建按钮分离的下拉菜单。</p>
     <div class="bs-example">
       <div class="btn-group">
         <button type="button" class="btn btn-default">缺省按钮</button>
@@ -957,7 +957,7 @@ base_url: "../"
 
 
     <h2 id="input-groups-sizing">大小</h2>
-    <p>添加相关的表单大小类到<code>.input-group</code> 本身， and contents within will automatically resize—no need for repeating the form control size classes on each element.</p>
+    <p>添加相关的表单大小类到<code>.input-group</code> 本身， 里面的内容将自的调整大小，不需要在每个部件上重复应用表单控制大小类。</p>
     <form class="bs-example bs-example-form" role="form">
       <div class="input-group input-group-lg">
         <span class="input-group-addon">@</span>
@@ -1037,7 +1037,7 @@ base_url: "../"
 
 
     <h2 id="input-groups-buttons">按钮控件</h2>
-    <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p>
+    <p>按钮在输入组中有点不同，要求一个额外的嵌套。代替 <code>.input-group-addon</code>, 将需要用 <code>.input-group-btn</code> 包装这些按钮。</p>
     <form class="bs-example bs-example-form">
       <div class="row">
         <div class="col-lg-6">
@@ -1079,7 +1079,7 @@ base_url: "../"
 </div><!-- /.row -->
 {% endhighlight %}
 
-    <h2 id="input-groups-buttons-dropdowns">Buttons with dropdowns</h2>
+    <h2 id="input-groups-buttons-dropdowns">带下拉菜单的按钮</h2>
     <p></p>
     <form class="bs-example bs-example-form" role="form">
       <div class="row">
@@ -1150,7 +1150,7 @@ base_url: "../"
 </div><!-- /.row -->
 {% endhighlight %}
 
-    <h2 id="input-groups-buttons-segmented">Segmented buttons</h2>
+    <h2 id="input-groups-buttons-segmented">分段按钮</h2>
     <form class="bs-example bs-example-form" role="form">
       <div class="row">
         <div class="col-lg-6">
@@ -1220,7 +1220,7 @@ base_url: "../"
       <h1 id="nav">导航</h1>
     </div>
 
-    <p class="lead">Navs available in Bootstrap have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
+    <p class="lead">导航用基类 <code>.nav</code> 开始，后面跟决定导航样式的修改者类，看下面例子。<p>
 
     <h2 id="nav-tabs">Tabs</h2>
     <p>注意 <code>.nav-tabs</code> 类要求和 <code>.nav</code> 基类组合使用。</p>
@@ -1239,12 +1239,12 @@ base_url: "../"
 </ul>
 {% endhighlight %}
     <div class="bs-callout bs-callout-info">
-      <h4>Requires JavaScript tabs plugin</h4>
-      <p>For tabs with tabbable areas, you must use the <a href="../javascript/#tabs">tabs JavaScript plugin</a>.</p>
+      <h4>要求 JavaScript tabs 插件</h4>
+      <p>必须调用 <a href="../javascript/#tabs">tabs JavaScript plugin</a>.</p>
     </div>
 
-    <h2 id="nav-pills">Pills</h2>
-    <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+    <h2 id="nav-pills">胶囊导航</h2>
+    <p>和 tab导航同样的HTML,样式修改者类用<code>.nav-pills</code> 代替：</p>
     <div class="bs-example">
       <ul class="nav nav-pills">
         <li class="active"><a href="#">Home</a></li>
@@ -1259,7 +1259,7 @@ base_url: "../"
   <li><a href="#">Messages</a></li>
 </ul>
 {% endhighlight %}
-    <p>Pills are also vertically stackable. Just add <code>.nav-stacked</code>.</p>
+    <p>胶囊导航也能竖直方向排列，增加一个<code>.nav-stacked</code>即可。</p>
     <div class="bs-example">
       <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
         <li class="active"><a href="#">Home</a></li>
@@ -1304,11 +1304,11 @@ base_url: "../"
 
 
     <h2 id="nav-disabled-links">禁用链接</h2>
-    <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>.</p>
+    <p>为任何导航部件 (tabs, pills, or list), 添加 <code>.disabled</code> 将 <strong>灰色化链接，取消 hover effects</strong>.</p>
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Link functionality not impacted</h4>
-      <p>This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.</p>
+      <h4>链接功能不受影响</h4>
+      <p>这个类仅仅更改 <code>&lt;a&gt;</code>的显示，而不影响它的功能。用定制的 JavaScript 来禁用链接。</p>
     </div>
 
     <div class="bs-example">
@@ -1327,10 +1327,10 @@ base_url: "../"
 {% endhighlight %}
 
 
-    <h2 id="nav-dropdowns">Using dropdowns</h2>
-    <p>Add dropdown menus with a little extra HTML and the <a href="../javascript/#dropdowns">dropdowns JavaScript plugin</a>.</p>
+    <h2 id="nav-dropdowns">用下拉菜单</h2>
+    <p>导航中增加下拉菜单要求HTML有小改动，并且要求 <a href="../javascript/#dropdowns">下拉菜单 JavaScript plugin</a>支持。</p>
 
-    <h3>Tabs with dropdowns</h3>
+    <h3>带拉菜单的Tab导航</h3>
     <div class="bs-example">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#">Home</a></li>
@@ -1406,10 +1406,10 @@ base_url: "../"
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="navbar">导航</h1>
+      <h1 id="navbar">导航条</h1>
     </div>
 
-    <h2 id="navbar-default">缺省导航</h2>
+    <h2 id="navbar-default">缺省导航条</h2>
     <p>导航s are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
 
     <div class="bs-callout bs-callout-info">
