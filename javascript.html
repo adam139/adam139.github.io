@@ -2,7 +2,7 @@
 layout: default
 title: JavaScript组件
 slug: js
-lead: "Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one."
+lead: "用于 Bootstrap的一些定制的jQuery 插件，可以选择所有插件打包，或者一个一个单独调用。"
 base_url: "../"
 ---
 
@@ -23,11 +23,11 @@ base_url: "../"
     </div>
 
     <div class="bs-callout bs-callout-danger">
-      <h4>Plugin dependencies</h4>
+      <h4>插件依存性</h4>
       <p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means jQuery must be included <strong>before</strong> the plugin files). <a href="{{ site.repo }}/blob/v{{ site.current_version }}/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
     </div>
 
-    <h3 id="js-data-attrs">Data attributes</h3>
+    <h3 id="js-data-attrs">Data 属性/h3>
     <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first-class API and should be your first consideration when using a plugin.</p>
 
     <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:
@@ -62,7 +62,7 @@ var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previous
 $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
 {% endhighlight %}
 
-    <h3 id="js-events">Events</h3>
+    <h3 id="js-events">事件</h3>
     <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
     <p>As of 3.0.0, all Bootstrap events are namespaced.</p>
     <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
@@ -226,19 +226,19 @@ $('#myModal').on('show.bs.modal', function (e) {
       <p>Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>.</p>
     </div>
 
-    <h2 id="modals-usage">Usage</h2>
+    <h2 id="modals-usage">如何使用</h2>
 
-    <h3>Via data attributes</h3>
+    <h3>通过数据属性</h3>
     <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
 {% highlight html %}
 <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
 {% endhighlight %}
 
-    <h3>Via JavaScript</h3>
+    <h3>通过JavaScript</h3>
     <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
     {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -283,7 +283,7 @@ $('#myModal').on('show.bs.modal', function (e) {
       </table>
     </div><!-- /.table-responsive -->
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
 
     <h4>.modal(options)</h4>
     <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
@@ -305,14 +305,14 @@ $('#myModal').modal({
     <p>Manually hides a modal.</p>
     {% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -348,18 +348,18 @@ $('#myModal').on('hidden.bs.modal', function () {
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="dropdowns">Dropdowns <small>dropdown.js</small></h1>
+      <h1 id="dropdowns">下拉菜单 <small>dropdown.js</small></h1>
     </div>
 
     <h2 id="dropdowns-examples">参考样例</h2>
-    <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
+    <p>使用该插件的所有下拉菜单时类似的，包括导航条， tabs, 和 pills.</p>
 
-    <h3>Within a navbar</h3>
+    <h3>导航条</h3>
     <div class="bs-example">
       <nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">触发导航</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -369,7 +369,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         <div class="collapse navbar-collapse bs-js-navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">下拉 <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">动作</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">另外动作</a></li>
@@ -379,7 +379,7 @@ $('#myModal').on('hidden.bs.modal', function () {
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
+              <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">下拉 2 <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">动作</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">另外动作</a></li>
@@ -391,7 +391,7 @@ $('#myModal').on('hidden.bs.modal', function () {
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="fat-menu" class="dropdown">
-              <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 3 <b class="caret"></b></a>
+              <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">下拉 3 <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">动作</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">另外动作</a></li>
@@ -410,7 +410,7 @@ $('#myModal').on('hidden.bs.modal', function () {
       <ul class="nav nav-pills">
         <li class="active"><a href="#">正常的链接</a></li>
         <li class="dropdown">
-          <a id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+          <a id="drop4" role="button" data-toggle="dropdown" href="#">下拉 <b class="caret"></b></a>
           <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">动作</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">另外动作</a></li>
@@ -420,7 +420,7 @@ $('#myModal').on('hidden.bs.modal', function () {
           </ul>
         </li>
         <li class="dropdown">
-          <a id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 2 <b class="caret"></b></a>
+          <a id="drop5" role="button" data-toggle="dropdown" href="#">下拉 2 <b class="caret"></b></a>
           <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">动作</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">另外动作</a></li>
@@ -430,7 +430,7 @@ $('#myModal').on('hidden.bs.modal', function () {
           </ul>
         </li>
         <li class="dropdown">
-          <a id="drop6" role="button" data-toggle="dropdown" href="#">Dropdown 3 <b class="caret"></b></a>
+          <a id="drop6" role="button" data-toggle="dropdown" href="#">下拉 3 <b class="caret"></b></a>
           <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop6">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">动作</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">另外动作</a></li>
@@ -443,23 +443,23 @@ $('#myModal').on('hidden.bs.modal', function () {
     </div> <!-- /example -->
 
 
-    <h2 id="dropdowns-usage">Usage</h2>
+    <h2 id="dropdowns-usage">如何使用</h2>
 
-    <h3>Via data attributes</h3>
-    <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
+    <h3>通过数据属性</h3>
+    <p>添加 <code>data-toggle="dropdown"</code> 到一个链接或按钮，以触发一个下拉效果。</p>
 {% highlight html %}
 <div class="dropdown">
-  <a data-toggle="dropdown" href="#">Dropdown trigger</a>
+  <a data-toggle="dropdown" href="#">下拉触发</a>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
     ...
   </ul>
 </div>
 {% endhighlight %}
-          <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
+          <p>为了保障 URLs 之间的交互性，用 <code>data-target</code> 属性取代 <code>href="#"</code>。</p>
 {% highlight html %}
 <div class="dropdown">
   <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-    Dropdown <span class="caret"></span>
+    下拉<span class="caret"></span>
   </a>
 
 
@@ -469,32 +469,32 @@ $('#myModal').on('hidden.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-    <h3>Via JavaScript</h3>
-    <p>Call the dropdowns via JavaScript:</p>
+    <h3>通过JavaScript</h3>
+    <p>通过JavaScript调用下拉菜单：</p>
 {% highlight js %}
 $('.dropdown-toggle').dropdown()
 {% endhighlight %}
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p><em>None</em></p>
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
     <h4>$().dropdown('toggle')</h4>
-    <p>Toggles the dropdown menu of a given navbar or tabbed navigation.</p>
+    <p>触发指定导航条或tabb导航。</p>
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th style="width: 150px;">Event Type</th>
-            <th>Description</th>
+            <th style="width: 150px;">事件类型</th>
+            <th>描述</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>show.bs.dropdown</td>
-            <td>This event fires immediately when the show instance method is called.</td>
+            <td>当显示实例方法被调用时，立即触发该事件。</td>
           </tr>
           <tr>
             <td>shown.bs.dropdown</td>
@@ -532,7 +532,7 @@ $('#myDropdown').on('show.bs.dropdown', function () {
       <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">触发导航</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -544,7 +544,7 @@ $('#myDropdown').on('show.bs.dropdown', function () {
             <li><a href="#fat">@fat</a></li>
             <li><a href="#mdo">@mdo</a></li>
             <li class="dropdown">
-              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown">下拉 <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="navbarDrop1">
                 <li><a href="#one" tabindex="-1">one</a></li>
                 <li><a href="#two" tabindex="-1">two</a></li>
@@ -572,9 +572,9 @@ $('#myDropdown').on('show.bs.dropdown', function () {
     </div><!-- /example -->
 
 
-    <h2 id="scrollspy-usage">Usage</h2>
+    <h2 id="scrollspy-usage">如何使用</h2>
 
-    <h3>Via data attributes</h3>
+    <h3>通过数据属性</h3>
     <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
 {% highlight html %}
 <body data-spy="scroll" data-target="#navbar-example">
@@ -582,7 +582,7 @@ $('#myDropdown').on('show.bs.dropdown', function () {
 </body>
 {% endhighlight %}
 
-    <h3>Via JavaScript</h3>
+    <h3>通过JavaScript</h3>
     <p>Call the scrollspy via JavaScript:</p>
 {% highlight js %}
 $('body').scrollspy({ target: '#navbar-example' })
@@ -593,7 +593,7 @@ $('body').scrollspy({ target: '#navbar-example' })
       <p>导航 links must have resolvable id targets. For example, a <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> must correspond to something in the DOM like <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.</p>
     </div>
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
     <h4>.scrollspy('refresh')</h4>
     <p>When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:</p>
 {% highlight js %}
@@ -603,7 +603,7 @@ $('[data-spy="scroll"]').each(function () {
 {% endhighlight %}
 
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -626,13 +626,13 @@ $('[data-spy="scroll"]').each(function () {
       </table>
     </div><!-- ./bs-table-responsive -->
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -656,7 +656,7 @@ $('#myScrollspy').on('activate.bs.scrollspy', function () {
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="tabs">Togglable tabs <small>tab.js</small></h1>
+      <h1 id="tabs">可触发的tabs<small>tab.js</small></h1>
     </div>
 
     <h2 id="tabs-examples">样例 tabs</h2>
@@ -666,7 +666,7 @@ $('#myScrollspy').on('activate.bs.scrollspy', function () {
         <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
         <li><a href="#profile" data-toggle="tab">Profile</a></li>
         <li class="dropdown">
-          <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">下拉 <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
             <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">@fat</a></li>
             <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">@mdo</a></li>
@@ -695,7 +695,7 @@ $('#myScrollspy').on('activate.bs.scrollspy', function () {
     </div>
 
 
-    <h2 id="tabs-usage">Usage</h2>
+    <h2 id="tabs-usage">如何使用</h2>
     <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
 {% highlight js %}
 $('#myTab a').click(function (e) {
@@ -743,7 +743,7 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 </div>
 {% endhighlight %}
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
     <h4>$().tab</h4>
     <p>
       Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
@@ -770,13 +770,13 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 </script>
 {% endhighlight %}
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -839,13 +839,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       <p>To add a tooltip to a <code>disabled</code> or <code>.disabled</code> element, put the element inside of a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, and apply the tooltip to that element instead.</p>
     </div>
 
-    <h2 id="tooltips-usage">Usage</h2>
+    <h2 id="tooltips-usage">如何使用</h2>
     <p>Trigger the tooltip via JavaScript:</p>
 {% highlight js %}
 $('#example').tooltip(options)
 {% endhighlight %}
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -925,7 +925,7 @@ $('#example').tooltip(options)
 <a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
 {% endhighlight %}
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
 
     <h4>$().tooltip(options)</h4>
     <p>Attaches a tooltip handler to an element collection.</p>
@@ -946,13 +946,13 @@ $('#example').tooltip(options)
     <p>Hides and destroys an element's tooltip.</p>
     {% highlight js %}$('#element').tooltip('destroy'){% endhighlight %}
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -1072,11 +1072,11 @@ $('#myTooltip').on('hidden.bs.tooltip', function () {
     </div><!-- /example -->
 
 
-    <h2 id="popovers-usage">Usage</h2>
+    <h2 id="popovers-usage">如何使用</h2>
     <p>Enable popovers via JavaScript:</p>
     {% highlight js %}$('#example').popover(options){% endhighlight %}
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -1157,7 +1157,7 @@ $('#myTooltip').on('hidden.bs.tooltip', function () {
       <p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
     </div>
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
     <h4>$().popover(options)</h4>
     <p>Initializes popovers for an element collection.</p>
 
@@ -1176,13 +1176,13 @@ $('#myTooltip').on('hidden.bs.tooltip', function () {
     <h4>.popover('destroy')</h4>
     <p>Hides and destroys an element's popover.</p>
     {% highlight js %}$('#element').popover('destroy'){% endhighlight %}
-    <h3>Events</h3>
+    <h3>事件</h3>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -1242,7 +1242,7 @@ $('#myPopover').on('hidden.bs.popover', function () {
     </div><!-- /example -->
 
 
-    <h2 id="alerts-usage">Usage</h2>
+    <h2 id="alerts-usage">如何使用</h2>
     <p>Enable dismissal of an alert via JavaScript:</p>
     {% highlight js %}$(".alert").alert(){% endhighlight %}
 
@@ -1250,7 +1250,7 @@ $('#myPopover').on('hidden.bs.popover', function () {
     <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.</p>
     {% highlight html %}<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>{% endhighlight %}
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
 
     <h4>$().alert()</h4>
     <p>Wraps all alerts with close functionality. To have your alerts animate out when closed, make sure they have the <code>.fade</code> and <code>.in</code> class already applied to them.</p>
@@ -1260,14 +1260,14 @@ $('#myPopover').on('hidden.bs.popover', function () {
     {% highlight js %}$(".alert").alert('close'){% endhighlight %}
 
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <p>Bootstrap's alert class exposes a few events for hooking into alert functionality.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th style="width: 150px;">Event Type</th>
-            <th>Description</th>
+            <th style="width: 150px;">事件类型</th>
+            <th>描述</th>
           </tr>
         </thead>
         <tbody>
@@ -1382,7 +1382,7 @@ $('#my-alert').bind('closed.bs.alert', function () {
 {% endhighlight %}
 
 
-    <h2 id="buttons-usage">Usage</h2>
+    <h2 id="buttons-usage">如何使用</h2>
     <p>Enable buttons via JavaScript:</p>
 {% highlight js %}
 $('.btn-group').button()
@@ -1391,10 +1391,10 @@ $('.btn-group').button()
     <h3>Markup</h3>
     <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p><em>None</em></p>
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
 
     <h4>$().button('toggle')</h4>
     <p>Toggles push state. Gives the button the appearance that it has been activated.</p>
@@ -1554,19 +1554,19 @@ $('.btn-group').button()
 {% endhighlight %}
 
 
-    <h2 id="collapse-usage">Usage</h2>
+    <h2 id="collapse-usage">如何使用</h2>
 
-    <h3>Via data attributes</h3>
+    <h3>通过数据属性</h3>
     <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
     <p>To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.</p>
 
-    <h3>Via JavaScript</h3>
+    <h3>通过JavaScript</h3>
     <p>Enable manually with:</p>
 {% highlight js %}
 $(".collapse").collapse()
 {% endhighlight %}
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -1595,7 +1595,7 @@ $(".collapse").collapse()
       </table>
     </div><!-- /.table-responsive -->
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
 
     <h4>.collapse(options)</h4>
     <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
@@ -1614,14 +1614,14 @@ $('#myCollapsible').collapse({
     <h4>.collapse('hide')</h4>
     <p>Hides a collapsible element.</p>
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -1779,19 +1779,19 @@ $('#myCollapsible').on('hidden.bs.collapse', function () {
   <p>The carousel component is generally not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.</p>
 </div>
 
-    <h2 id="carousel-usage">Usage</h2>
+    <h2 id="carousel-usage">如何使用</h2>
 
-    <h3>Via data attributes</h3>
+    <h3>通过数据属性</h3>
     <p>Use data attributes to easily control the position of the carousel. <code>data-slide</code> accepts the keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
     <p>The <code>data-ride="carousel"</code> attribute is used to mark a carousel as animating starting at page load.</p>
 
-    <h3>Via JavaScript</h3>
+    <h3>通过JavaScript</h3>
     <p>Call carousel manually with:</p>
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -1826,7 +1826,7 @@ $('.carousel').carousel()
       </table>
     </div><!-- /.table-responsive -->
 
-    <h3>Methods</h3>
+    <h3>方法</h3>
 
     <h4>.carousel(options)</h4>
     <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
@@ -1852,14 +1852,14 @@ $('.carousel').carousel({
     <h4>.carousel('next')</h4>
     <p>Cycles to the next item.</p>
 
-    <h3>Events</h3>
+    <h3>事件</h3>
     <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 150px;">Event Type</th>
-           <th>Description</th>
+           <th style="width: 150px;">事件类型</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -1895,9 +1895,9 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 
     <hr class="bs-docs-separator">
 
-    <h2 id="affix-usage">Usage</h2>
+    <h2 id="affix-usage">如何使用</h2>
 
-    <h3>Via data attributes</h3>
+    <h3>通过数据属性</h3>
     <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.</p>
 
 {% highlight html %}
@@ -1912,7 +1912,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
       </p>
     </div>
 
-    <h3>Via JavaScript</h3>
+    <h3>通过JavaScript</h3>
     <p>Call the affix plugin via JavaScript:</p>
 {% highlight js %}
   $('#myAffix').affix({
@@ -1926,7 +1926,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 {% endhighlight %}
 
 
-    <h3>Options</h3>
+    <h3>选项</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
 
     <div class="table-responsive">
