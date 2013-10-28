@@ -19,7 +19,7 @@ base_url: "../"
 
     <div class="bs-callout bs-callout-danger">
       <h4>不要两个都包括</h4>
-      <p>Both <code>bootstrap.js</code> and <code>bootstrap.min.js</code> contain all plugins in a single file.</p>
+      <p>Both<code>bootstrap.js</code> and <code>bootstrap.min.js</code> contain all plugins in a single file.</p>
     </div>
 
     <div class="bs-callout bs-callout-danger">
@@ -118,8 +118,8 @@ $('#myModal').on('show.bs.modal', function (e) {
               <p>One fine body&hellip;</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              <button type="button" class="btn btn-primary">保存更改</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -137,8 +137,8 @@ $('#myModal').on('show.bs.modal', function (e) {
         <p>One fine body&hellip;</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存更改</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -180,8 +180,8 @@ $('#myModal').on('show.bs.modal', function (e) {
             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary">保存更改</button>
           </div>
 
         </div><!-- /.modal-content -->
@@ -211,8 +211,8 @@ $('#myModal').on('show.bs.modal', function (e) {
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存更改</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -1782,17 +1782,17 @@ $('#myCollapsible').on('hidden.bs.collapse', function () {
     <h2 id="carousel-usage">如何使用</h2>
 
     <h3>通过数据属性</h3>
-    <p>Use data attributes to easily control the position of the carousel. <code>data-slide</code> accepts the keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
+    <p>通过数据属性容易控制carousel位置， <code>data-slide</code> 接受关键词 <code>prev</code> 或 <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
     <p>The <code>data-ride="carousel"</code> attribute is used to mark a carousel as animating starting at page load.</p>
 
     <h3>通过JavaScript</h3>
-    <p>Call carousel manually with:</p>
+    <p>手动调用 carousel:</p>
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
     <h3>选项</h3>
-    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
+    <p>选项能采用数据属性或JavaScript来传输。对于数据属性方式，追加选项名到 <code>data-</code>,例如 <code>data-interval=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
@@ -1820,7 +1820,7 @@ $('.carousel').carousel()
            <td>wrap</td>
            <td>boolean</td>
            <td>true</td>
-           <td>Whether the carousel should cycle continuously or have hard stops.</td>
+           <td>是否循环轮换。</td>
          </tr>
         </tbody>
       </table>
@@ -1829,7 +1829,7 @@ $('.carousel').carousel()
     <h3>方法</h3>
 
     <h4>.carousel(options)</h4>
-    <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
+    <p>用可选参数初始化 carousel <code>object</code> 并且开始循环轮换。</p>
 {% highlight js %}
 $('.carousel').carousel({
   interval: 2000
@@ -1891,29 +1891,29 @@ $('#myCarousel').on('slide.bs.carousel', function () {
     </div>
 
     <h2 id="affix-examples">样例</h2>
-    <p>The subnavigation on the left is a live demo of the affix plugin.</p>
+    <p>本文左边的导航区是一个affix应用的例子</p>
 
     <hr class="bs-docs-separator">
 
     <h2 id="affix-usage">如何使用</h2>
 
     <h3>通过数据属性</h3>
-    <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.</p>
+    <p>添加affix 行为到任意部件，只需添加 <code>data-spy="affix"</code> 到你想侦探的部件。 Then use offsets to define when to toggle the pinning of an element on and off.</p>
 
 {% highlight html %}
 <div data-spy="affix" data-offset-top="200">...</div>
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Requires independent styling ;)</h4>
+      <h4>要求设置独立的样式表 ;)</h4>
       <p>
-        Affix toggles between three states/classes: <code>.affix</code>, <code>.affix-top</code>, and <code>.affix-bottom</code>. You must provide the styles for these classes yourself (independent of this plugin).
+        Affix 触发在三个状态/classes之间： <code>.affix</code>, <code>.affix-top</code>, and <code>.affix-bottom</code>. 你必须自己为这三个类提高样式代码 (样式代码独立于该插件)。
         The <code>.affix-top</code> class should be in the regular flow of the document. The <code>.affix</code> class should be <code>position: fixed</code>. And <code>.affix-bottom</code> should be <code>position: absolute</code>. Note: <code>.affix-bottom</code> is special in that the plugin will place the element with JS relative to the <code>offset: { bottom: number }</code> option you've provided.
       </p>
     </div>
 
     <h3>通过JavaScript</h3>
-    <p>Call the affix plugin via JavaScript:</p>
+    <p>通过JavaScript调用affix 插件 :</p>
 {% highlight js %}
   $('#myAffix').affix({
     offset: {
@@ -1927,7 +1927,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 
 
     <h3>选项</h3>
-    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
+    <p>通过数据属性或javascript传输选项.如数据属性，追加属性名称到 <code>data-</code>,例如<code>data-offset-top="200"</code>.</p>
 
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -1944,7 +1944,7 @@ $('#myCarousel').on('slide.bs.carousel', function () {
            <td>offset</td>
            <td>number | function | object</td>
            <td>10</td>
-           <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and bottom directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
+           <td>当计算滚动位置时，从屏幕偏移的像素。如果给出单个数字，这个偏移量将被应用到顶部和底部。 To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
          </tr>
         </tbody>
       </table>
