@@ -19,34 +19,34 @@ base_url: "../"
 
     <div class="bs-callout bs-callout-danger">
       <h4>不要两个都包括</h4>
-      <p>Both<code>bootstrap.js</code> and <code>bootstrap.min.js</code> contain all plugins in a single file.</p>
+      <p><code>bootstrap.js</code> 和<code>bootstrap.min.js</code> 都包含所有插件在一个文件中。</p>
     </div>
 
     <div class="bs-callout bs-callout-danger">
       <h4>插件依存性</h4>
-      <p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means jQuery must be included <strong>before</strong> the plugin files). <a href="{{ site.repo }}/blob/v{{ site.current_version }}/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
+      <p>某些插件和CSS部件依赖于其他部件，如果你单独包括这样的插件，肯定也应该引入其依赖的插件。另外，在所有插件的 <strong>前面</strong> ，应包含JQuery。对于jQuery的版本要求，查看 <a href="{{ site.repo }}/blob/v{{ site.current_version }}/bower.json"><code>bower.json</code></a></p>
     </div>
 
-    <h3 id="js-data-attrs">Data 属性/h3>
-    <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first-class API and should be your first consideration when using a plugin.</p>
+    <h3 id="js-data-attrs">Data 属性</h3>
+    <p>你能通过markup API直接调用所有插件功能，不必写一行javascript代码。这是我们优先推荐的方式。</p>
 
-    <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:
+    <p>也许，某些情况下，需要关断这一功能，也就是要取消数据属性 API，只需在document名称空间松绑所有事件即可， <code>data-api</code>. 如下:
 {% highlight js %}
 $(document).off('.data-api')
 {% endhighlight %}
 
-    <p>Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:</p>
+    <p>也可以只针对某一插件关断其数据属性API，如下:</p>
 {% highlight js %}
 $(document).off('.alert.data-api')
 {% endhighlight %}
 
-    <h3 id="js-programmatic-api">Programmatic API</h3>
-    <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+    <h3 id="js-programmatic-api">可编程API</h3>
+    <p>也可以仅仅通过JavaScript API来使用插件。所有公共的 APIs 都是单一的、链式的方法， and return the collection acted upon.</p>
 {% highlight js %}
 $(".btn.danger").button("toggle").addClass("fat")
 {% endhighlight %}
 
-    <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
+    <p>所有方法应该接受一个可选的参数对象，一个以特定方法为目标的字符串，或者为空(意味着用缺省值初始化该插件):</p>
 {% highlight js %}
 $("#myModal").modal()                      // initialized with defaults
 $("#myModal").modal({ keyboard: false })   // initialized with no keyboard
@@ -63,7 +63,7 @@ $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Boot
 {% endhighlight %}
 
     <h3 id="js-events">事件</h3>
-    <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
+    <p>Bootstrap 为绝大多数插件的唯一性动作提供定制的事件。 Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>显示</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
     <p>As of 3.0.0, all Bootstrap events are namespaced.</p>
     <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
 {% highlight js %}
@@ -73,8 +73,8 @@ $('#myModal').on('show.bs.modal', function (e) {
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-warning" id="callout-third-party-libs">
-      <h4>Third-party libraries</h4>
-      <p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own. Ask on the <a href="http://groups.google.com/group/twitter-bootstrap">mailing list</a> if you need help.</p>
+      <h4>三方库</h4>
+      <p><strong>Bootstrap 官方不支持三方JavaScript 库</strong> 象 Prototype 或 jQuery UI等。 Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own. Ask on the <a href="http://groups.google.com/group/twitter-bootstrap">mailing list</a> if you need help.</p>
     </div>
   </div>
 
@@ -102,10 +102,10 @@ $('#myModal').on('show.bs.modal', function (e) {
     </div>
 
     <h2 id="modals-examples">参考样例</h2>
-    <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+    <p>Modals是改进型的，灵活的的对话框提示。</p>
 
-    <h3>Static example</h3>
-    <p>A rendered modal with header, body, and set of actions in the footer.</p>
+    <h3>静态样例</h3>
+    <p>一个带 header, body,和页角区一系列action按钮的modal样例</p>
     <div class="bs-example bs-example-modal">
       <div class="modal">
         <div class="modal-dialog">
@@ -145,8 +145,8 @@ $('#myModal').on('show.bs.modal', function (e) {
 </div><!-- /.modal -->
 {% endhighlight %}
 
-    <h3>Live demo</h3>
-    <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+    <h3>活动样例</h3>
+    <p>通过JavaScript 触发一个modal,它将从页面顶部淡入，然后下滑到中央</p>
     <!-- sample modal content -->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -190,13 +190,13 @@ $('#myModal').on('show.bs.modal', function (e) {
 
     <div class="bs-example" style="padding-bottom: 24px;">
       <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        Launch demo modal
+        触发活动modal
       </button>
     </div><!-- /example -->
 {% highlight html %}
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
+  触发活动modal
 </button>
 
 <!-- Modal -->
@@ -221,61 +221,61 @@ $('#myModal').on('show.bs.modal', function (e) {
 
 
     <div class="bs-callout bs-callout-warning">
-      <h4>Make modals accessible</h4>
-      <p>Be sure to add <code>role="dialog"</code> to <code>.modal</code>, <code>aria-labelledby="myModalLabel"</code> attribute to reference the modal title, and <code>aria-hidden="true"</code> to tell assistive technologies to skip the modal's DOM elements.</p>
-      <p>Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>.</p>
+      <h4>使得modals可访问</h4>
+      <p>肯定添加 <code>role="dialog"</code> 到 <code>.modal</code>, <code>aria-labelledby="myModalLabel"</code> 属性引用modal标题，并且 <code>aria-hidden="true"</code> to tell assistive technologies to skip the modal's DOM elements.</p>
+      <p>另外，也可以对你的modal给出一个描述，用<code>aria-describedby</code> 在 <code>.modal</code>上。</p>
     </div>
 
     <h2 id="modals-usage">如何使用</h2>
 
     <h3>通过数据属性</h3>
-    <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+    <p>不用写JavaScript，激活modal。设置 <code>data-toggle="modal"</code> 在一个控制部件上如一个 button, 同时伴随用 一个 <code>data-target="#foo"</code> 或者 <code>href="#foo"</code> 属性指向一个特定的将被触发的modal</p>
 {% highlight html %}
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+<button type="button" data-toggle="modal" data-target="#myModal">触发modal</button>
 {% endhighlight %}
 
     <h3>通过JavaScript</h3>
-    <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
+    <p>通过id<code>myModal</code>指向，用一行javascript调用modal:</p>
     {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
     <h3>选项</h3>
-    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+    <p>选项可以通过数据属性或js来传输。采用数据属性方法，追加选项名称到 <code>data-</code>, 例如 <code>data-backdrop=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 50px;">type</th>
-           <th style="width: 50px;">default</th>
-           <th>description</th>
+           <th style="width: 100px;">名称</th>
+           <th style="width: 50px;">类型</th>
+           <th style="width: 50px;">缺省</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
          <tr>
-           <td>backdrop</td>
+           <td>背景</td>
            <td>boolean or the string <code>'static'</code></td>
            <td>true</td>
-           <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+           <td>包括一个 modal-backdrop 部件。可以指定 <code>static</code> 为一个背景，点击click时，不会关闭背景。</td>
          </tr>
          <tr>
-           <td>keyboard</td>
+           <td>键盘</td>
            <td>boolean</td>
            <td>true</td>
-           <td>Closes the modal when escape key is pressed</td>
+           <td>当 escape 键被按下时，关闭modal</td>
          </tr>
          <tr>
-           <td>show</td>
+           <td>显示</td>
            <td>boolean</td>
            <td>true</td>
-           <td>Shows the modal when initialized.</td>
+           <td>当初始化完成后，即显示modal.</td>
          </tr>
          <tr>
-           <td>remote</td>
+           <td>远程</td>
            <td>path</td>
            <td>false</td>
-           <td><p>If a remote URL is provided, content will be loaded via jQuery's <code>load</code> method and injected into the root of the modal element. If you're using the data-api, you may alternatively use the <code>href</code> attribute to specify the remote source. An example of this is shown below:</p>
+           <td><p>如果一个远程 URL被提供，内容将被调入通过 jQuery's <code>load</code> 方法并被注入到modal部件的根结点。如果采用数据属性 data-api,可以用 <code>href</code> 属性指定远程source。看下面的例子:</p>
 {% highlight html %}
-<a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a>
+<a data-toggle="modal" href="remote.html" data-target="#modal">点击我</a>
 {% endhighlight %}
            </td>
          </tr>
@@ -286,7 +286,7 @@ $('#myModal').on('show.bs.modal', function (e) {
     <h3>方法</h3>
 
     <h4>.modal(options)</h4>
-    <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
+    <p>作为一个modal激活你的内容。接受一个可选参数 <code>object</code>.</p>
 {% highlight js %}
 $('#myModal').modal({
   keyboard: false
@@ -294,19 +294,19 @@ $('#myModal').modal({
 {% endhighlight %}
 
     <h4>.modal('toggle')</h4>
-    <p>Manually toggles a modal.</p>
+    <p>手动触发一个modal</p>
     {% highlight js %}$('#myModal').modal('toggle'){% endhighlight %}
 
     <h4>.modal('show')</h4>
-    <p>Manually opens a modal.</p>
+    <p>手动打开一个modal</p>
     {% highlight js %}$('#myModal').modal('show'){% endhighlight %}
 
     <h4>.modal('hide')</h4>
-    <p>Manually hides a modal.</p>
+    <p>手动隐藏一个modal</p>
     {% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
 
     <h3>事件</h3>
-    <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+    <p>Bootstrap 的 modal 类 提供一系列事件以挂钩相应的modal功能。</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
@@ -318,19 +318,17 @@ $('#myModal').modal({
         <tbody>
          <tr>
            <td>show.bs.modal</td>
-           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
-         </tr>
-         <tr>
+           <td>这个事件在当<code>显示</code>实例方法被调用时，触发</td>
            <td>shown.bs.modal</td>
-           <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete).</td>
+           <td>这个事件在当modal已经被切换为可视时(will wait for CSS transitions to complete)，被触发。 </td>
          </tr>
          <tr>
            <td>hide.bs.modal</td>
-           <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+           <td>这个事件在当<code>hide</code>实例方法被调用时，触发 </td>
          </tr>
          <tr>
            <td>hidden.bs.modal</td>
-           <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+           <td>这个事件在当modal已经被切换为隐藏时(will wait for CSS transitions to complete)，被触发。</td>
          </tr>
         </tbody>
       </table>
@@ -364,7 +362,7 @@ $('#myModal').on('hidden.bs.modal', function () {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project Name</a>
+          <a class="navbar-brand" href="#">项目名</a>
         </div>
         <div class="collapse navbar-collapse bs-js-navbar-collapse">
           <ul class="nav navbar-nav">
@@ -498,15 +496,15 @@ $('.dropdown-toggle').dropdown()
           </tr>
           <tr>
             <td>shown.bs.dropdown</td>
-            <td>This event is fired when the dropdown has been made visible to the user (will wait for CSS transitions, to complete).</td>
+            <td>这个事件在当这个下拉菜单已经被切换为可视时(will wait for CSS transitions to complete)，被触发。</td>
           </tr>
           <tr>
             <td>hide.bs.dropdown</td>
-            <td>This event is fired immediately when the hide instance method has been called.</td>
+            <td>当下拉菜单的隐藏实例方法被调用时，这个事件被立即触发</td>
           </tr>
           <tr>
             <td>hidden.bs.dropdown</td>
-            <td>This event is fired when the dropdown has finished being hidden from the user (will wait for CSS transitions, to complete).</td>
+            <td>这个事件在当这个下拉菜单已经被切换为隐藏时(will wait for CSS transitions to complete)，被触发。</td>
           </tr>
         </tbody>
       </table>
@@ -522,12 +520,12 @@ $('#myDropdown').on('show.bs.dropdown', function () {
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="scrollspy">ScrollSpy <small>scrollspy.js</small></h1>
+      <h1 id="scrollspy">滚动侦测<small>scrollspy.js</small></h1>
     </div>
 
 
     <h2 id="scrollspy-examples">样例 in navbar</h2>
-    <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
+    <p>这个滚动侦测插件是基于滚动的位置自动更新 nav 目的。滚动在这个导航条下面的区域，观察激活的类的更改. 这个下拉子项也将被高亮。</p>
     <div class="bs-example">
       <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
         <div class="navbar-header">
@@ -537,7 +535,7 @@ $('#myDropdown').on('show.bs.dropdown', function () {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project Name</a>
+          <a class="navbar-brand" href="#">项目名</a>
         </div>
         <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
           <ul class="nav navbar-nav">
@@ -575,7 +573,7 @@ $('#myDropdown').on('show.bs.dropdown', function () {
     <h2 id="scrollspy-usage">如何使用</h2>
 
     <h3>通过数据属性</h3>
-    <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
+    <p>添加 <code>data-spy="scroll"</code> 到你想侦探的部件， (通常是<code>&lt;body&gt;</code>)。然后加 <code>data-target</code> 属性（用 ID或 class 指向任何Bootstrap <code>.nav</code>部件的父亲部件。</p>
 {% highlight html %}
 <body data-spy="scroll" data-target="#navbar-example">
   ...
@@ -583,19 +581,19 @@ $('#myDropdown').on('show.bs.dropdown', function () {
 {% endhighlight %}
 
     <h3>通过JavaScript</h3>
-    <p>Call the scrollspy via JavaScript:</p>
+    <p>通过JavaScript调用滚动侦测插件:</p>
 {% highlight js %}
 $('body').scrollspy({ target: '#navbar-example' })
 {% endhighlight %}
 
     <div class="bs-callout bs-callout-danger">
-      <h4>Resolvable ID targets required</h4>
-      <p>导航 links must have resolvable id targets. For example, a <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> must correspond to something in the DOM like <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.</p>
+      <h4>要求有可解析的目标ID</h4>
+      <p>导航 链接必须有可解析的目标ID。例如一个 <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> 要求在DOM中确实有一个<code>&lt;div id="home"&gt;&lt;/div&gt;</code>.</p>
     </div>
 
     <h3>方法</h3>
     <h4>.scrollspy('refresh')</h4>
-    <p>When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:</p>
+    <p>当在有删除/添加dom部件情况时，使用 scrollspy，将需要调用其刷新的方法:</p>
 {% highlight js %}
 $('[data-spy="scroll"]').each(function () {
   var $spy = $(this).scrollspy('refresh')
@@ -604,15 +602,15 @@ $('[data-spy="scroll"]').each(function () {
 
 
     <h3>选项</h3>
-    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=""</code>.</p>
+    <p>选项能被用数据属性或javascript方法传输。对于数据属性方式，追加选项名到 <code>data-</code>,例如 <code>data-offset=""</code>.</p>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 100px;">type</th>
-           <th style="width: 50px;">default</th>
-           <th>description</th>
+           <th style="width: 100px;">名称</th>
+           <th style="width: 100px;">类型</th>
+           <th style="width: 50px;">缺省</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -620,7 +618,7 @@ $('[data-spy="scroll"]').each(function () {
            <td>offset</td>
            <td>number</td>
            <td>10</td>
-           <td>Pixels to offset from top when calculating position of scroll.</td>
+           <td>从顶部计算的偏移量，单位像素。</td>
          </tr>
         </tbody>
       </table>
@@ -638,7 +636,7 @@ $('[data-spy="scroll"]').each(function () {
         <tbody>
          <tr>
            <td>activate.bs.scrollspy</td>
-           <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
+           <td>当新的内容子项由 scrollspy激活时，触发该事件。</td>
         </tr>
         </tbody>
       </table>
@@ -660,7 +658,7 @@ $('#myScrollspy').on('activate.bs.scrollspy', function () {
     </div>
 
     <h2 id="tabs-examples">样例 tabs</h2>
-    <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
+    <p>添加快速。动态的tab 功能到本地内容组，甚至结合下拉菜单功能。</p>
     <div class="bs-example bs-example-tabs">
       <ul id="myTab" class="nav nav-tabs">
         <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
@@ -690,13 +688,13 @@ $('#myScrollspy').on('activate.bs.scrollspy', function () {
     </div><!-- /example -->
 
     <div class="bs-callout bs-callout-info">
-      <h4>Extends tabbed navigation</h4>
-      <p>This plugin extends the <a href="../components/#nav-tabs">tabbed navigation component</a> to add tabbable areas.</p>
+      <h4>扩展的tabbed 导航</h4>
+      <p>这个插件扩展 <a href="../components/#nav-tabs">tabbed 导航部件</a> 以添加可 tabbable 区域。</p>
     </div>
 
 
     <h2 id="tabs-usage">如何使用</h2>
-    <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
+    <p>通过JavaScript启用 tabbable tabs  (注意每个 tab 需要被单独激活):</p>
 {% highlight js %}
 $('#myTab a').click(function (e) {
   e.preventDefault()
@@ -704,7 +702,7 @@ $('#myTab a').click(function (e) {
 })
 {% endhighlight %}
 
-          <p>You can activate individual tabs in several ways:</p>
+          <p>你能激活独立的tab用下面几种方式：</p>
 {% highlight js %}
 $('#myTab a[href="#profile"]').tab('show') // Select tab by name
 $('#myTab a:first').tab('show') // Select first tab
@@ -712,8 +710,8 @@ $('#myTab a:last').tab('show') // Select last tab
 $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 {% endhighlight %}
 
-    <h3>Markup</h3>
-    <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap <a href="{{ page.base_url }}components#nav-tabs">tab styling</a>, while adding the <code>nav</code> and <code>nav-pills</code> classes will apply <a href="{{ page.base_url }}components#nav-pills">pill styling</a>.</p>
+    <h3>HTML标记</h3>
+    <p>在部件上简单指定 <code>data-toggle="tab"</code> 或者<code>data-toggle="pill"</code>。添加 <code>nav</code> 和 <code>nav-tabs</code> classes 到这个 tab <code>ul</code> 将应用Bootstrap <a href="{{ page.base_url }}components#nav-tabs">的tab 样式</a>, 当添加 <code>nav</code> 和 <code>nav-pills</code> classes 将应用 <a href="{{ page.base_url }}components#nav-pills">pill 样式</a>.</p>
 {% highlight html %}
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
@@ -732,8 +730,8 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 </div>
 {% endhighlight %}
 
-    <h3>Fade effect</h3>
-    <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>. The first tab pane must also have <code>.in</code> to properly fade in initial content.</p>
+    <h3>淡入淡出效果</h3>
+    <p>为制作淡入效果。添加 <code>.fade</code> 到每一 <code>.tab-pane</code>.首个 tab 组也必须有 <code>.in</code> 以恰当地淡入初始化内容。</p>
 {% highlight html %}
 <div class="tab-content">
   <div class="tab-pane fade in active" id="home">...</div>
@@ -746,7 +744,7 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
     <h3>方法</h3>
     <h4>$().tab</h4>
     <p>
-      Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
+      激活一个 tab 部件和内容容器。 Tab 应该或者有一个 <code>data-target</code> 或者一个 <code>href</code> 指向在DOM中的一个容器结点。
     </p>
 {% highlight html %}
 <ul class="nav nav-tabs" id="myTab">
@@ -805,33 +803,33 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
-      <h1 id="tooltips">Tooltips <small>tooltip.js</small></h1>
+      <h1 id="tooltips">工具提示<small>tooltip.js</small></h1>
     </div>
 
     <h2 id="tooltips-examples">参考样例</h2>
-    <p>Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage.</p>
-    <p>Hover over the links below to see tooltips:</p>
+    <p>灵感来自由Jason Frame写的优秀的 jQuery.tipsy 插件， Tooltips是一个改进版，不依赖任何 图片，用 CSS3 为动画效果，应用 data-attributes 为本地 title存储。</p>
+    <p>鼠标悬停在下面的链接上，看tooltips效果: </p>
     <div class="bs-example tooltip-demo">
       <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
       </p>
     </div><!-- /example -->
 
-    <h3>Four directions</h3>
+    <h3>四个方向</h3>
     <div class="bs-example tooltip-demo">
       <div class="bs-example-tooltips">
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">左边Tooltip</button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">上部Tooltip</button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">下部Tooltip</button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">右边Tooltip</button>
       </div>
     </div><!-- /example -->
 
     <div class="bs-callout bs-callout-danger">
-      <h4>Opt-in functionality</h4>
-      <p>For performance reasons, the Tooltip and Popover data-apis are opt-in, meaning <strong>you must initialize them yourself</strong>.</p>
+      <h4>可调配功能</h4>
+      <p>为性能原因，工具提示和弹窗插件的 data-apis是可调配部件，意味着 <strong>你必须自己初始化他们</strong>。</p>
     </div>
     <div class="bs-callout bs-callout-info">
-      <h4>Tooltips in button groups and input groups require special setting</h4>
+      <h4>工具提示在按钮组和输入组要求有特别的设置。</h4>
       <p>When using tooltips on elements within a <code>.btn-group</code> or an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> (documented below) to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip is triggered).</p>
     </div>
     <div class="bs-callout bs-callout-info">
@@ -840,7 +838,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     </div>
 
     <h2 id="tooltips-usage">如何使用</h2>
-    <p>Trigger the tooltip via JavaScript:</p>
+    <p>通过JavaScript触发工具提示:</p>
 {% highlight js %}
 $('#example').tooltip(options)
 {% endhighlight %}
@@ -851,10 +849,10 @@ $('#example').tooltip(options)
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 100px;">type</th>
-           <th style="width: 50px;">default</th>
-           <th>description</th>
+           <th style="width: 100px;">名称</th>
+           <th style="width: 100px;">类型</th>
+           <th style="width: 50px;">缺省</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -920,7 +918,7 @@ $('#example').tooltip(options)
       <p>Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.</p>
     </div>
 
-    <h3>Markup</h3>
+    <h3>HTML标记</h3>
 {% highlight html %}
 <a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
 {% endhighlight %}
@@ -958,7 +956,7 @@ $('#example').tooltip(options)
         <tbody>
          <tr>
            <td>show.bs.tooltip</td>
-           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+           <td>This event fires immediately when the <code>显示</code> instance method is called.</td>
          </tr>
          <tr>
            <td>shown.bs.tooltip</td>
@@ -1048,12 +1046,12 @@ $('#myTooltip').on('hidden.bs.tooltip', function () {
       <div class="clearfix"></div>
     </div>
 
-    <h3>Live demo</h3>
+    <h3>活动样例</h3>
     <div class="bs-example" style="padding-bottom: 24px;">
       <a href="#" class="btn btn-lg btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?" role="button">Click to toggle popover</a>
     </div>
 
-    <h4>Four directions</h4>
+    <h4>四个方向</h4>
     <div class="bs-example tooltip-demo">
       <div class="bs-example-tooltips">
         <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
@@ -1082,10 +1080,10 @@ $('#myTooltip').on('hidden.bs.tooltip', function () {
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th style="width: 100px;">Name</th>
-            <th style="width: 100px;">type</th>
-            <th style="width: 50px;">default</th>
-            <th>description</th>
+            <th style="width: 100px;">名称</th>
+            <th style="width: 100px;">类型</th>
+            <th style="width: 50px;">缺省</th>
+            <th>描述</th>
           </tr>
         </thead>
         <tbody>
@@ -1188,7 +1186,7 @@ $('#myTooltip').on('hidden.bs.tooltip', function () {
         <tbody>
          <tr>
            <td>show.bs.popover</td>
-           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+           <td>This event fires immediately when the <code>显示</code> instance method is called.</td>
          </tr>
          <tr>
            <td>shown.bs.popover</td>
@@ -1246,7 +1244,7 @@ $('#myPopover').on('hidden.bs.popover', function () {
     <p>Enable dismissal of an alert via JavaScript:</p>
     {% highlight js %}$(".alert").alert(){% endhighlight %}
 
-    <h3>Markup</h3>
+    <h3>HTML标记</h3>
     <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.</p>
     {% highlight html %}<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>{% endhighlight %}
 
@@ -1388,7 +1386,7 @@ $('#my-alert').bind('closed.bs.alert', function () {
 $('.btn-group').button()
 {% endhighlight %}
 
-    <h3>Markup</h3>
+    <h3>HTML标记</h3>
     <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
 
     <h3>选项</h3>
@@ -1572,10 +1570,10 @@ $(".collapse").collapse()
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 50px;">type</th>
-           <th style="width: 50px;">default</th>
-           <th>description</th>
+           <th style="width: 100px;">名称</th>
+           <th style="width: 50px;">类型</th>
+           <th style="width: 50px;">缺省</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -1627,7 +1625,7 @@ $('#myCollapsible').collapse({
         <tbody>
          <tr>
            <td>show.bs.collapse</td>
-           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+           <td>This event fires immediately when the <code>显示</code> instance method is called.</td>
          </tr>
          <tr>
            <td>shown.bs.collapse</td>
@@ -1797,10 +1795,10 @@ $('.carousel').carousel()
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 50px;">type</th>
-           <th style="width: 50px;">default</th>
-           <th>description</th>
+           <th style="width: 100px;">名称</th>
+           <th style="width: 50px;">类型</th>
+           <th style="width: 50px;">缺省</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
@@ -1933,10 +1931,10 @@ $('#myCarousel').on('slide.bs.carousel', function () {
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 100px;">type</th>
-           <th style="width: 50px;">default</th>
-           <th>description</th>
+           <th style="width: 100px;">名称</th>
+           <th style="width: 100px;">类型</th>
+           <th style="width: 50px;">缺省</th>
+           <th>描述</th>
          </tr>
         </thead>
         <tbody>
